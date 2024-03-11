@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: RockoFLF SDF
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: 1076263975
   material: {fileID: 6925149805806767292}
-  materialHashCode: 0
+  materialHashCode: 1315498151
   m_Version: 1.1.0
   m_SourceFontFileGUID: 9210d4b30d659c849986d882e68b1695
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 9210d4b30d659c849986d882e68b1695, type: 3}
@@ -2739,9 +2739,9 @@ Material:
     - _OutlineWidth: 0
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
-    - _ScaleRatioA: 1
-    - _ScaleRatioB: 1
-    - _ScaleRatioC: 1
+    - _ScaleRatioA: 0.8333333
+    - _ScaleRatioB: 0.6770833
+    - _ScaleRatioC: 0.6770833
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -2750,8 +2750,8 @@ Material:
     - _Stencil: 0
     - _StencilComp: 8
     - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
+    - _StencilReadMask: 1
+    - _StencilWriteMask: 0
     - _TextureHeight: 512
     - _TextureWidth: 512
     - _UnderlayDilate: 0
