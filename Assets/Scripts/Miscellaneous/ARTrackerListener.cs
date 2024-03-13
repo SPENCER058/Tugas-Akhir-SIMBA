@@ -15,7 +15,7 @@ public class ARTrackerListener : MonoBehaviour
 
 	#region UNITY_LIFECYCLE
 
-	public void Initialize ()
+	public void Start ()
 	{
 		if (m_trackedImageManager == null)
 		{
@@ -25,7 +25,7 @@ public class ARTrackerListener : MonoBehaviour
 		m_trackedImageManager.trackedImagesChanged += OnImageChanged;
 	}
 
-	public void CleanUp ()
+	public void OnDisable ()
 	{
 		m_trackedImageManager.trackedImagesChanged -= OnImageChanged;
 	}
@@ -38,20 +38,21 @@ public class ARTrackerListener : MonoBehaviour
 	{
 		foreach (ARTrackedImage trackedImage in args.added)
 		{
-			if (IsTracking(trackedImage) && !IsOnList(trackedImage)) TrackImage(trackedImage);
+			if (IsTracking(trackedImage) && !IsOnList(trackedImage) && GetRefName(trackedImage)!= null) TrackImage(trackedImage);
 		}
 
 		foreach (ARTrackedImage trackedImage in args.updated)
 		{
-			if (IsTracking(trackedImage) && !IsOnList(trackedImage))
+			if (IsTracking(trackedImage) && !IsOnList(trackedImage) && GetRefName(trackedImage) != null)
 			{
 				TrackImage(trackedImage);
 			}
-			else if (!IsTracking(trackedImage) && IsOnList(trackedImage))
+			else if (!IsTracking(trackedImage) && IsOnList(trackedImage) && GetRefName(trackedImage) != null)
 			{
 				UnTrackImage(trackedImage);
 			}
 		}
+
 	}
 
 	private void TrackImage (ARTrackedImage trackedImage)
