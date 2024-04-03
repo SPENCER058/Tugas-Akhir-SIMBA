@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.Video;
@@ -5,19 +6,17 @@ using UnityEngine.Video;
 public class VideoManager : MonoBehaviour
 {
 	[SerializeField] private VideoPlayer _videoPlayer;
-
 	[SerializeField] private UIVideoPlayButton _videoPlayButton;
 	[SerializeField] private VideoTimeLineController _videoTimeLine;
 	[SerializeField] private UIVideoVolumeController _videoVolumeController;
-
 	[SerializeField] private RenderTexture _videoRenderTexture;
 
 	private bool isPlayingVideo = false;
+	private bool hasVideoEnded = false;
 
 	private void Awake ()
 	{
 		_videoRenderTexture.Release();
-
 		_videoPlayer.clip = null;
 
 		_videoPlayButton.SubscribeEvents();
@@ -44,7 +43,7 @@ public class VideoManager : MonoBehaviour
 
 		_videoVolumeController.OnVolumeChanged += (value) => _videoPlayer.SetDirectAudioVolume(0, value);
 
-		_videoTimeLine.OnTimeLineChanged += (value) => _videoPlayer.time = value;
+		_videoTimeLine.OnTimeLineChanged += HandleTimeLineChanged;
 	}
 
 	private void Update ()
@@ -55,7 +54,6 @@ public class VideoManager : MonoBehaviour
 	private void OnDisable ()
 	{
 		_videoPlayer.loopPointReached -= VideoEndReached;
-
 
 		_videoRenderTexture.Release();
 		_videoPlayer.clip = null;
@@ -68,15 +66,23 @@ public class VideoManager : MonoBehaviour
 		_videoVolumeController.OnVolumeChanged -= (value) => _videoPlayer.SetDirectAudioVolume(0, value);
 		_videoVolumeController.CleanUp();
 
-		_videoTimeLine.OnTimeLineChanged -= (value) => _videoPlayer.time = value;
+		_videoTimeLine.OnTimeLineChanged -= HandleTimeLineChanged;
 		_videoTimeLine.CleanUp();
 	}
 
 	public void SetAndPlayClip (VideoClip clip)
 	{
 		_videoPlayer.clip = clip;
+		hasVideoEnded = false;
 		SetupComponent();
 		_videoPlayButton.ManualPlay();
+	}
+
+	private void HandleTimeLineChanged (float value)
+	{
+		_videoPlayer.time = value;
+		_videoPlayButton.ChangeUIState(_videoPlayer.isPlaying);
+
 	}
 
 	public void Play ()
@@ -97,13 +103,32 @@ public class VideoManager : MonoBehaviour
 		_videoTimeLine.ResetInteractiveSlider();
 		_videoPlayButton.ChangeUIState(true);
 		_videoPlayButton.ManualPlay();
+		hasVideoEnded = false; // Reset the flag when replaying
 	}
 
 	private void VideoEndReached (VideoPlayer vp)
 	{
-		_videoPlayButton.ManualPause();
-		_videoPlayButton.ChangeIconToReplay();
 
+		_videoPlayButton.ManualPause();
+
+		StartCoroutine(IsReachEndAgain());
+
+		if (!hasVideoEnded)
+		{
+			_videoPlayButton.ChangeIconToReplay();
+			hasVideoEnded = true;
+
+		}
 	}
 
+	private IEnumerator IsReachEndAgain ()
+	{
+		yield return new WaitForSeconds(0.1f);
+		bool isSliderReachMax = _videoTimeLine.IsReachMax();
+
+		if (isSliderReachMax)
+		{
+			hasVideoEnded = false;
+		}
+	}
 }

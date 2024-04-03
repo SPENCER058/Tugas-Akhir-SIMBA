@@ -47,4 +47,14 @@ public class VideoTimeLineController : MonoBehaviour
 	{
 		_interactiveTimeLineSlider.onValueChanged.RemoveAllListeners();
 	}
+
+	public bool IsReachMax ()
+	{
+		float n = _currentTimeLineSlider.maxValue - 1;
+
+		Debug.Log("Current time value " + _currentTimeLineSlider.value);
+		Debug.Log("Max time value " + _currentTimeLineSlider.maxValue +" "+ n);
+
+		return _currentTimeLineSlider.value <= _currentTimeLineSlider.maxValue - 1;
+	}
 }
