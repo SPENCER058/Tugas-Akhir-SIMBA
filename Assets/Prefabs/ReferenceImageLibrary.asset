@@ -23,8 +23,8 @@ MonoBehaviour:
     m_SerializedTextureGuid:
       m_GuidLow: 5432481134890104732
       m_GuidHigh: 17847025303607485962
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
+    m_Size: {x: 0.1, y: 0.13333334}
+    m_SpecifySize: 1
     m_Name: Flood
     m_Texture: {fileID: 2800000, guid: 4622b79c0ccf4b640aa6eebef45eadf7, type: 3}
   - m_SerializedGuid:
@@ -33,8 +33,8 @@ MonoBehaviour:
     m_SerializedTextureGuid:
       m_GuidLow: 15971091353775901346
       m_GuidHigh: 1054684347053976058
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
+    m_Size: {x: 0.1, y: 0.13333334}
+    m_SpecifySize: 1
     m_Name: Landslide
     m_Texture: {fileID: 2800000, guid: c1200aa2b6f7dda4fa295160d3fda20e, type: 3}
   - m_SerializedGuid:
@@ -43,7 +43,7 @@ MonoBehaviour:
     m_SerializedTextureGuid:
       m_GuidLow: 12377063684990425095
       m_GuidHigh: 331755134373790907
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
+    m_Size: {x: 0.1, y: 0.13333334}
+    m_SpecifySize: 1
     m_Name: Tsunami
     m_Texture: {fileID: 2800000, guid: 523dd80729d8abc4bb04c37889a19a04, type: 3}

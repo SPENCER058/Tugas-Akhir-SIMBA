@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Potrait : MonoBehaviour
 {
-    void Start()
+    void Awake()
     {
         Screen.orientation = ScreenOrientation.Portrait;
     }

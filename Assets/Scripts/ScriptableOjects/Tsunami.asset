@@ -14,4 +14,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _panelTitleImage: {fileID: 21300000, guid: 256a535899b1db64ea5a01305f961a4b, type: 3}
   _headerImage: {fileID: 21300000, guid: 1b7d3a2e94b4f754d88e427539b6d0df, type: 3}
-  _contentText: Tsunami
+  _contentText: "Pernahkah kamu mendengarkan bencana tsunami yang disiarkan di media-media
+    berita? Atau pernah membaca informasi mengenai bencana tsunami besar yang pernah
+    melanda negara Indonesia tepatnya di Aceh pada tahun 2004?\r\n\r\nSecara umum
+    tsunami merupakan sebuah bencana gelombang air laut besar yang disebabkan oleh
+    fenomena bawah laut seperti pergeseran lempeng, tanah longsor bawah laut, erupsi
+    gunungapi bawah laut, dan jatuhnya meteor ke permukaan lautan. Tsunami sangat
+    berpotensi bahaya meskipun tsunami ini tidak terlalu merusak garis pantai. \r\n\r\nDampak-dampak
+    yang ditimbulkan akibat bencana ini mencakup banyak sekali faktor. Mulai dari
+    kerugian jiwa seperti jatuhnya korban, kerugian ekonomi akibat berhentinya proses
+    jual beli, kerugian mental, kerugian kesehatan akibat peningkatan penyebaran
+    penyakit, juga kerugian materil dari aset-aset swasta maupun pemerintah yang
+    rusak akibat bencana ini.\r\n\r\nBerdasarkan informasi diatas, dampak tsunami
+    sangat besar. Lalu bagaimana cara kita selamat atau setidaknya mencegah kerugian
+    yang lebih besar? Mari kita bahas.\r\n\r\nKita akan membahas secara runtut. Mulai
+    dari cara mengetahui tanda-tanda potensi tsunami. Umumnya ada beberapa tanda
+    dalam mendeteksi tsunami secara dini, dikarenakan macam-macam sumber tsunami
+    sudah diketahui. Beberapa tanda tersebut adalah : \r\n\t1. Diawali dengan gempa
+    bumi, terutama ketika berada didekat pantai.\r\n\t2. Terdengarnya gemuruh dibawah
+    laut, yang berasal dari fenomena bencana bawah laut.\r\n\t3. Permukaan air laut
+    turun atau surut dengan cepat.\r\n\t4. Gelombang air yang tinggi. \r\n\t5. Gerakan
+    angin yang tidak biasa. \r\n\t6. Tekanan udara atau cuaca yang ekstrem.\r\n\t7.
+    Perilaku hewan yang berubah.\r\n\r\nDari data diatas kita sudah mengetahui tanda-tandanya,
+    lantas apakah ada cara untuk mencegah tsunami terjadi? \r\n\r\nTsunami merupakan
+    salah satu bencana yang saat ini belum bisa dicegah secara penuh, namun tsunami
+    bisa dikurangi dampak atau resikonya dengan aksi mitigasi seperti pembangunan
+    tanggul alami atau struktural sebagai pelindung pantai dan pemecah ombak tsunami
+    juga sangat berguna untuk mengurangi dampak dari bencana ini. Tata ruang kota
+    atau daerah yang mengutamakan jalur evakuasi, serta perancangan bangunan yang
+    tahan ombak tsunami juga sangat penting untuk memudahkan evakuasi masyarakat
+    dan mengurangi jatuhnya korban. Sosialisasi kepada masyarakat tentang bahaya
+    tsunami dan langkah-langkah persiapan sampai langkah-langkah evakuasi juga penting
+    untuk dilaksanakan. Mari kita membahas tentang langkah-langkah tersebut berdasarkan
+    saran atau informasi dari BPBD Jogja.\r\n\r\nPersiapan masyarakat menghadapi
+    tsunami :\r\n\t1. Mengetahui dan terus memantau pusat informasi bencana.\r\n\t2.
+    Mengenali area atau wilayah yang beresiko terdampak tsunami, biasanya dataran
+    rendah.\r\n\t3. Mengetahui daerah atau wilayah dataran tinggi yang berpotensi
+    selamat dari dampak tsunami.\r\n\t4. Menetahui rute evakuasi yang telah dibuat.\r\n\t5.
+    Persiapkan persediaan untuk mengungsi.\r\nYang dapat dilakukan saat tsunami :\r\n\t1.
+    Segera jauhi bibir pantai dan pergi ke tempat tinggi atau menuju ke zona evakuasi,
+    apabila terjadi guncangan gempa bumi dan atau permukaan air surut tiba-tiba.\r\n\t2.
+    Jika berada di kapal, segera bergerak menjauh berlawanan arah dari daratan. \r\n\t3.
+    Mengutamakan keselamatan diri. Tinggalkan barang-barang yang tidak perlu dan
+    menghambat evakuasi. \r\n\t4. Tsunami terkadang tidak terjadi hanya satu gelombang,
+    oleh sebab itu jangan langsung turun atau mendekat ke pantai setelah gelombang
+    pertama surut. \r\n\t5. Pantau sumber informasi terpercaya tentang bencana tsunami
+    yang terjadi, dan tempat evakuasi. \r\n\nYang dapat dilakukan setelah terjadi
+    tsunami :\r\n\t1. Mengutamakan keselamatan diri dan bukan barang-barang. \r\n\t2.
+    Jauhi area rusak dan tergenang oleh air akibat tsunami. \r\n\t3. Jauhi reruntuhan
+    di dalam air. \r\n\t4. Jauhi jaringan instalasi listrik dan pipa gas.\r\n\t5.
+    Pantau terus informasi dari sumber-sumber terpercaya.\r\n\t6. Berhati-hati saat
+    memasuki gedung, dan waspada akan ancaman tidak terlihat seperti fondasi bangunan.
+    \r\n7. Segera menuju ke pos kesehatan apabila terluka.\r\n8.\tPeriksa ketersediaan
+    dan kelayakan stok makanan.\r\n9.\tSegera membangun tenda pengungsian atau menuju
+    tenda pengungsian apabila rumah tidak layak huni. \r\n"

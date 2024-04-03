@@ -154,7 +154,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.EnigmaKeyCode.SIMBAAR
+    Android: com.EnigmaKeyCode.SIMBAARMitigasi
   buildNumber:
     Standalone: 0
     VisionOS: 0

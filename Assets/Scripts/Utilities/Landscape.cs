@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Landscape : MonoBehaviour
 {
-    void Start()
+    void Awake()
     {
         Screen.orientation = ScreenOrientation.LandscapeLeft;
     }

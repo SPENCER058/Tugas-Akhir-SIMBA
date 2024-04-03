@@ -14,4 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _panelTitleImage: {fileID: 21300000, guid: c427cb08e57c6b34ab8c9168cf4d0057, type: 3}
   _headerImage: {fileID: 21300000, guid: 455a58a7bd09b1e47a7b922fdc0836b9, type: 3}
-  _contentText: Tanah Longsor
+  _contentText: "Tanah longsor adalah fenomena alam yang sering terjadi di daerah
+    Banjarnegara. \n\nFaktor Penyebab Tanah Longsor:\n- Curah Hujan Tinggi. \n- Kemiringan
+    Tanah. \n- Penggundulan hutan yang tidak terkendali (Deforestasi).\n- Pembangunan
+    yang tidak sesuai dengan teknik yang benar, seperti pemotongan lereng atau pembuangan
+    limbah yang tidak terkendali, dapat memicu tanah longsor.\n\nDampak Tanah Longsor:\n-
+    Kerusakan Lingkungan. \n- Kerugian Materi & Jiwa.\n\nTanda-tanda Potensi Tanah
+    Longsor:\n- Retakan pada tanah atau lereng. \n- Air tanah atau air sungai yang
+    tiba-tiba muncul atau menghilang. \n- Perubahan pola air sungai. \n-Getaran atau
+    suara gemuruh dari tanah atau lereng.\n- Pohon-pohon atau tiang listrik yang
+    miring.\n\nUpaya Pencegahan dan Mitigasi:\n- Konservasi Sumber Daya Alam. \n-
+    Perencanaan Tata Ruang yang Baik. \n- Sistem Peringatan Dini. \n- Edukasi Masyarakat."

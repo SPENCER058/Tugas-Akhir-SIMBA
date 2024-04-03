@@ -16,6 +16,7 @@ public class VideoTimeLineController : MonoBehaviour
 		_currentTimeLineSlider.maxValue = maxTime;
 
 		_interactiveTimeLineSlider.maxValue = maxTime;
+		_interactiveTimeLineSlider.value = 0;
 	}
 
 	public void SubscribeEvents ()
