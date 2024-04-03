@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 using UnityEngine.Video;
 
 public class VideoManager : MonoBehaviour
@@ -35,7 +36,10 @@ public class VideoManager : MonoBehaviour
 
 	private void OnEnable ()
 	{
+		_videoPlayer.loopPointReached += VideoEndReached;
+
 		_videoPlayButton.OnPlayRequested += Play;
+		_videoPlayButton.OnReplayRequested += Replay;
 		_videoPlayButton.OnPauseRequested += Pause;
 
 		_videoVolumeController.OnVolumeChanged += (value) => _videoPlayer.SetDirectAudioVolume(0, value);
@@ -50,11 +54,14 @@ public class VideoManager : MonoBehaviour
 
 	private void OnDisable ()
 	{
+		_videoPlayer.loopPointReached -= VideoEndReached;
+
 
 		_videoRenderTexture.Release();
 		_videoPlayer.clip = null;
 
 		_videoPlayButton.OnPlayRequested -= Play;
+		_videoPlayButton.OnReplayRequested -= Replay;
 		_videoPlayButton.OnPauseRequested -= Pause;
 		_videoPlayButton.CleanUp();
 
@@ -82,6 +89,21 @@ public class VideoManager : MonoBehaviour
 	{
 		isPlayingVideo = false;
 		_videoPlayer.Pause();
+	}
+
+	public void Replay ()
+	{
+		_videoPlayer.Stop();
+		_videoTimeLine.ResetInteractiveSlider();
+		_videoPlayButton.ChangeUIState(true);
+		_videoPlayButton.ManualPlay();
+	}
+
+	private void VideoEndReached (VideoPlayer vp)
+	{
+		_videoPlayButton.ManualPause();
+		_videoPlayButton.ChangeIconToReplay();
+
 	}
 
 }

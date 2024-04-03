@@ -24,6 +24,11 @@ public class VideoTimeLineController : MonoBehaviour
 		_interactiveTimeLineSlider.onValueChanged.AddListener((value) => OnTimeLineChanged?.Invoke(value));
 	}
 
+	public void ResetInteractiveSlider ()
+	{
+		_interactiveTimeLineSlider.value = 0;
+	}
+
 	public void UpdateCurrentTime (float time)
 	{
 		_currentDurationText.text = FormatTime(time);

@@ -1639,6 +1639,7 @@ MonoBehaviour:
   _playPauseButton: {fileID: 6956546191954561287}
   _playIcon: {fileID: 21300000, guid: 7465d6c4a1619d148870b549a9934e70, type: 3}
   _pauseIcon: {fileID: 21300000, guid: 268b7a8b9daecbc4b8224f7000acb079, type: 3}
+  _replayIcon: {fileID: 21300000, guid: 339dc6273c9389b489d75c94bdd662ec, type: 3}
 --- !u!114 &6956546191954561287
 MonoBehaviour:
   m_ObjectHideFlags: 0

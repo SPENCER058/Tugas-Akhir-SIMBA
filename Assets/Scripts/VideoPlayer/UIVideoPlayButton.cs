@@ -6,10 +6,12 @@ public class UIVideoPlayButton : MonoBehaviour
 	[SerializeField] private UnityEngine.UI.Button _playPauseButton;
 	[SerializeField] private Sprite _playIcon;
 	[SerializeField] private Sprite _pauseIcon;
+	[SerializeField] private Sprite _replayIcon;
 
 	public delegate void OnPlayPauseButtonClicked ();
 
 	public event OnPlayPauseButtonClicked OnPlayRequested;
+	public event OnPlayPauseButtonClicked OnReplayRequested;
 	public event OnPlayPauseButtonClicked OnPauseRequested;
 
 	private bool isPlayingVideo = false;
@@ -30,28 +32,47 @@ public class UIVideoPlayButton : MonoBehaviour
 		HandleButtonClicked();
 	}
 
-	private void HandleButtonClicked ()
+	public void ManualPause ()
+	{
+		isPlayingVideo = true;
+		HandleButtonClicked();
+	}
+
+	public void HandleButtonClicked ()
 	{
 		bool newState;
 
-		if (isPlayingVideo)
+		if (_playPauseButton.image.sprite == _replayIcon)
 		{
-			newState = false;
-			OnPauseRequested?.Invoke();
-		} 
+			OnReplayRequested?.Invoke();
+		}
 		else
 		{
-			newState = true;
-			OnPlayRequested?.Invoke();
+			if (isPlayingVideo)
+			{
+				newState = false;
+				OnPauseRequested?.Invoke();
+			}
+			else
+			{
+				newState = true;
+				OnPlayRequested?.Invoke();
+			}
+
+			ChangeUIState(newState);
 		}
 
-		ChangeUIState(newState);
 	}
 
-	private void ChangeUIState (bool value)
+	public void ChangeUIState (bool value)
 	{
 		isPlayingVideo = value;
 		_playPauseButton.image.sprite = isPlayingVideo ? _pauseIcon : _playIcon;
+	}
+
+	public void ChangeIconToReplay ()
+	{
+		_playPauseButton.image.sprite = _replayIcon;
 	}
 
 	public void CleanUp ()
