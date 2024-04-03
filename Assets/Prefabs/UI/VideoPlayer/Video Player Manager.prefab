@@ -1224,7 +1224,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '20 : 00'
+  m_text: '00 : 00'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1739,6 +1739,7 @@ MonoBehaviour:
   _videoPlayButton: {fileID: 5853858304784248699}
   _videoTimeLine: {fileID: 1030000121987206227}
   _videoVolumeController: {fileID: 5173387512659775729}
+  _videoRenderTexture: {fileID: 8400000, guid: 326ec8c4ac97a1442ad18b1e85015f38, type: 2}
 --- !u!328 &4566646007997065312
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -1747,7 +1748,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6010334836170080400}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: a30a4ddb2ee5842468f1910979ae8fd9, type: 3}
+  m_VideoClip: {fileID: 0}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}

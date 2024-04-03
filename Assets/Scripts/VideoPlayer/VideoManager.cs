@@ -9,18 +9,19 @@ public class VideoManager : MonoBehaviour
 	[SerializeField] private VideoTimeLineController _videoTimeLine;
 	[SerializeField] private UIVideoVolumeController _videoVolumeController;
 
+	[SerializeField] private RenderTexture _videoRenderTexture;
+
 	private bool isPlayingVideo = false;
 
 	private void Awake ()
 	{
+		_videoRenderTexture.Release();
+
+		_videoPlayer.clip = null;
+
 		_videoPlayButton.SubscribeEvents();
 		_videoVolumeController.SubscribeEvents();
 		_videoTimeLine.SubscribeEvents();
-
-		if (_videoPlayer.clip != null)
-		{
-			SetupComponent();
-		}
 	}
 
 	private void SetupComponent ()
@@ -49,6 +50,10 @@ public class VideoManager : MonoBehaviour
 
 	private void OnDisable ()
 	{
+
+		_videoRenderTexture.Release();
+		_videoPlayer.clip = null;
+
 		_videoPlayButton.OnPlayRequested -= Play;
 		_videoPlayButton.OnPauseRequested -= Pause;
 		_videoPlayButton.CleanUp();
