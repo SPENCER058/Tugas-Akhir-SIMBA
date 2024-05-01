@@ -392,12 +392,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 281440085889106644, guid: 27f1d2545de88f945a6df877fc30a23b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 281440085889106644, guid: 27f1d2545de88f945a6df877fc30a23b, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 281440085889106644, guid: 27f1d2545de88f945a6df877fc30a23b, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2181795867827652583, guid: 27f1d2545de88f945a6df877fc30a23b, type: 3}
       propertyPath: m_Name
       value: Canvas AR Scan Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415123258406423724, guid: 27f1d2545de88f945a6df877fc30a23b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3415123258406423724, guid: 27f1d2545de88f945a6df877fc30a23b, type: 3}
       propertyPath: m_AnchorMax.y
