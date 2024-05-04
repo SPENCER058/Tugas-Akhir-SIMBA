@@ -3,14 +3,19 @@ using UnityEngine;
 
 public class DisasterManager : MonoBehaviour
 {
+
+	[SerializeField] private ARScanUISwitch arUISwitch;
+
 	[SerializeField] private ARTrackerListener trackerListener;
 	[SerializeField] private List<DisasterKeyIndex> disasterList;
 
 	private Dictionary<string, BaseDisasterController> disasterDictionary;
+	private HashSet<string> trackedDisasters;
 
 	private void Awake ()
 	{
 		disasterDictionary = new Dictionary<string, BaseDisasterController> ();
+		trackedDisasters = new HashSet<string>();
 
 		foreach (DisasterKeyIndex disaster in disasterList)
 		{
@@ -32,15 +37,38 @@ public class DisasterManager : MonoBehaviour
 
 	public void HandleAddedImage (string keyName, Vector3 position)
 	{
+		Debug.Log("Detected = " + keyName);
+
 		BaseDisasterController ctrl = disasterDictionary[keyName];
 		ctrl.ChangePosition (position);
 		ctrl.Activate ();
+
+		if (!trackedDisasters.Contains(keyName)) { trackedDisasters.Add(keyName); }
+
+		UpdateARUI ();
 
 	}
 
 	public void HandleRemovedImage (string keyName)
 	{
-		disasterDictionary[keyName].Deactivate ();
+		if (trackedDisasters.Contains(keyName))
+		{
+			disasterDictionary[keyName].Deactivate();
+			trackedDisasters.Remove(keyName);
+			UpdateARUI();
+		}
+	}
+
+	private void UpdateARUI()
+	{
+		if (trackedDisasters.Count == 0)
+		{
+			arUISwitch.SetIdleUI();
+		}
+		else
+		{
+			arUISwitch.SetSimulationUI();
+		}
 	}
 
 }

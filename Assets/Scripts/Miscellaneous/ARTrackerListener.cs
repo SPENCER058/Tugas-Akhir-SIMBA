@@ -36,6 +36,7 @@ public class ARTrackerListener : MonoBehaviour
 
 	private void OnImageChanged (ARTrackedImagesChangedEventArgs args)
 	{
+
 		foreach (ARTrackedImage trackedImage in args.added)
 		{
 			if (IsTracking(trackedImage) && !IsOnList(trackedImage) && GetRefName(trackedImage)!= null) TrackImage(trackedImage);
