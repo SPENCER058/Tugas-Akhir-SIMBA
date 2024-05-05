@@ -74,6 +74,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 099c760f98a07884c8baebf72b4d2e8e, type: 2}
+    - target: {fileID: 2404517466606340274, guid: 464a2f0d45807e84a82c77b0cc6240b1, type: 3}
+      propertyPath: profile
+      value: 
+      objectReference: {fileID: 11400000, guid: 209bc280a9122b64682d7ec0b424af49, type: 2}
     - target: {fileID: 7441161985184037430, guid: 464a2f0d45807e84a82c77b0cc6240b1, type: 3}
       propertyPath: m_Name
       value: Tsunami Model

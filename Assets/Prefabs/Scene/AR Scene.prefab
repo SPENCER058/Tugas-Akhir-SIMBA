@@ -447,6 +447,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arUISwitch: {fileID: 8274267852353234344}
+  simulationPanelController: {fileID: 7835070844058277574}
+  infoPanelController: {fileID: 9178885789045941046}
   trackerListener: {fileID: 6584012450647971178}
   disasterList:
   - key: Tsunami
@@ -1560,6 +1562,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 967379314864112178, guid: 27f1d2545de88f945a6df877fc30a23b, type: 3}
   m_PrefabInstance: {fileID: 4231015097308618343}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7835070844058277574 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6200426151772948641, guid: 27f1d2545de88f945a6df877fc30a23b, type: 3}
+  m_PrefabInstance: {fileID: 4231015097308618343}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6076b5b909e7f34f95fc307a4acc055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8274267852353234344 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5216170116895996879, guid: 27f1d2545de88f945a6df877fc30a23b, type: 3}
@@ -1569,6 +1582,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 82b52628458c2654f8b0bfabdf55b0f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9178885789045941046 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5032321981984537937, guid: 27f1d2545de88f945a6df877fc30a23b, type: 3}
+  m_PrefabInstance: {fileID: 4231015097308618343}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911335702017717707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a60a7a74b4508c04e99f1c8bc5069f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &4518416382182320124

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efdeaeea45f7ad24abec65af946f7bd2, type: 3}
+  m_Name: Tsunami
+  m_EditorClassIdentifier: 
+  _disasterIcon: {fileID: 21300000, guid: d941ba98f48c6294497e387dcc5e57dd, type: 3}
+  _disasterName: Tsunami
+  _disasterLocation: Banda Aceh
+  _disasterScaleUnit: meter
+  _disasterStreghtList:
+  - 3
+  - 5
+  - 10
+  _infoPanelTitleImage: {fileID: 21300000, guid: 256a535899b1db64ea5a01305f961a4b, type: 3}
+  _headerImage: {fileID: 21300000, guid: 1b7d3a2e94b4f754d88e427539b6d0df, type: 3}
+  _contentText: Tsunami

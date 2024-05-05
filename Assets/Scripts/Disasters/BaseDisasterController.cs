@@ -10,6 +10,10 @@ public class BaseDisasterController : MonoBehaviour
 	[SerializeField] private string mediumTrigger = "Medium";
 	[SerializeField] private string highTrigger = "High";
 
+	[SerializeField] private SO_ARDisasterProfiles profile;
+
+	public SO_ARDisasterProfiles GetProfiles { get { return profile; } }
+
 	public void Activate ()
 	{
 		model.SetActive(true);

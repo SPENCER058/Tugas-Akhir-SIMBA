@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a4a87ab50fa7e0f43b68d87821ab32c4, type: 2}
+    - target: {fileID: 2404517466606340274, guid: 464a2f0d45807e84a82c77b0cc6240b1, type: 3}
+      propertyPath: profile
+      value: 
+      objectReference: {fileID: 11400000, guid: d237b40871a666c429c166a508fa1bce, type: 2}
     - target: {fileID: 7441161985184037430, guid: 464a2f0d45807e84a82c77b0cc6240b1, type: 3}
       propertyPath: m_Name
       value: Landslide Model
