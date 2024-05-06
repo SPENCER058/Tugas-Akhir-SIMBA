@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 072067d1f0ee77140917198a3c404dc0, type: 2}
+    - target: {fileID: 2404517466606340274, guid: 464a2f0d45807e84a82c77b0cc6240b1, type: 3}
+      propertyPath: profile
+      value: 
+      objectReference: {fileID: 11400000, guid: 4d6864d2af0f7ac41a3701defea9630e, type: 2}
     - target: {fileID: 7441161985184037430, guid: 464a2f0d45807e84a82c77b0cc6240b1, type: 3}
       propertyPath: m_Name
       value: Flood Model
@@ -56,6 +60,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8065608085964660196, guid: 464a2f0d45807e84a82c77b0cc6240b1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 96ab4023998d06c4d86b1b467b76ef50, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

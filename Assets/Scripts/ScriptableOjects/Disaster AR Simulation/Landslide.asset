@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efdeaeea45f7ad24abec65af946f7bd2, type: 3}
+  m_Name: Landslide
+  m_EditorClassIdentifier: 
+  _disasterIcon: {fileID: 21300000, guid: 7b3e475de1510a948a850e3391aca14b, type: 3}
+  _disasterName: Tanah Longsor
+  _disasterLocation: Banjarnegara
+  _disasterScaleUnit: meter
+  _disasterStreghtList:
+  - 10
+  - 20
+  - 30
+  _infoPanelTitleImage: {fileID: 21300000, guid: c427cb08e57c6b34ab8c9168cf4d0057, type: 3}
+  _headerImage: {fileID: 21300000, guid: 455a58a7bd09b1e47a7b922fdc0836b9, type: 3}
+  _contentText: Tanah Longsor

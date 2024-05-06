@@ -7,7 +7,9 @@ public class Quit : MonoBehaviour
 		#if UNITY_EDITOR
 				UnityEditor.EditorApplication.isPlaying = false;
 		#else
-			AndroidQuitAppUtility.MoveAppToBack();
+				Application.Quit(); 
 		#endif
+
+		//AndroidQuitAppUtility.MoveAppToBack();
 	}
 }

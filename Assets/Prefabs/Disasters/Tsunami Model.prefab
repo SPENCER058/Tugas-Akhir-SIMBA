@@ -74,6 +74,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 099c760f98a07884c8baebf72b4d2e8e, type: 2}
+    - target: {fileID: 2404517466606340274, guid: 464a2f0d45807e84a82c77b0cc6240b1, type: 3}
+      propertyPath: profile
+      value: 
+      objectReference: {fileID: 11400000, guid: 209bc280a9122b64682d7ec0b424af49, type: 2}
     - target: {fileID: 7441161985184037430, guid: 464a2f0d45807e84a82c77b0cc6240b1, type: 3}
       propertyPath: m_Name
       value: Tsunami Model
@@ -118,6 +122,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8065608085964660196, guid: 464a2f0d45807e84a82c77b0cc6240b1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2c8f943d9a490fe4295ee367f9be7753, type: 2}
     - target: {fileID: 8636624194473377548, guid: 464a2f0d45807e84a82c77b0cc6240b1, type: 3}
       propertyPath: m_IsActive
       value: 0
