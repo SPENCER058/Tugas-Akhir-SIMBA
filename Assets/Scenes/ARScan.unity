@@ -131,6 +131,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 753401599949932150, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 753401599949932150, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 753401599949932150, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 942321241726163466, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 942321241726163466, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4635054549924464089, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -298,7 +318,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 979301685285472181, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

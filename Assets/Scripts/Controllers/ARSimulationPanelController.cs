@@ -30,15 +30,20 @@ public class ARSimulationPanelController : MonoBehaviour
 		switch (index)
 		{
 			case 0:
-				disasterIconImage.sprite = lowRiskImage;
+				ChangeDisasterRiskImage(lowRiskImage);
 				break;
 			case 1:
-				disasterIconImage.sprite = mediumRiskImage;
+				ChangeDisasterRiskImage(mediumRiskImage);
 				break;
 			case 2:
-				disasterIconImage.sprite = highRiskImage;
+				ChangeDisasterRiskImage(highRiskImage);
 				break;
 		}
+	}
+
+	private void ChangeDisasterRiskImage (Sprite image)
+	{
+		disasterRiskImage.sprite = image;
 	}
 
 }

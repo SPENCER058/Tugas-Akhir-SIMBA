@@ -1,7 +1,6 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class DisasterManager : MonoBehaviour
 {
@@ -10,16 +9,20 @@ public class DisasterManager : MonoBehaviour
 	[SerializeField] private ARSimulationPanelController simulationPanelController;
 	[SerializeField] private ARInfoPanelController infoPanelController;
 
+	[SerializeField] private Slider simulationSlider;
+
 	[SerializeField] private ARTrackerListener trackerListener;
 	[SerializeField] private List<DisasterKeyIndex> disasterList;
 
 	private Dictionary<string, BaseDisasterController> disasterDictionary;
-	private Queue<string> trackedDisasters;
+	private List<string> trackedDisasters;
+
+	private BaseDisasterController currentDisasterController;
 
 	private void Awake ()
 	{
 		disasterDictionary = new Dictionary<string, BaseDisasterController> ();
-		trackedDisasters = new Queue<string>();
+		trackedDisasters = new List<string>();
 
 		foreach (DisasterKeyIndex disaster in disasterList)
 		{
@@ -39,49 +42,67 @@ public class DisasterManager : MonoBehaviour
 		trackerListener.OnImageRemoved -= HandleRemovedImage;
 	}
 
-	public void HandleAddedImage (string keyName, Vector3 position)
+	private void HandleAddedImage (string keyName, Vector3 position)
 	{
-		BaseDisasterController ctrl = disasterDictionary[keyName];
 
-		if (trackedDisasters.Count != 0 && trackedDisasters.Peek() == keyName)
-		{
-			ctrl.ChangePosition(position);
-		}
+		BaseDisasterController ctrl = disasterDictionary[keyName];
 
 		if (!trackedDisasters.Contains(keyName))
 		{
-			trackedDisasters.Enqueue(keyName);
+			ctrl.ChangePosition(position);
+			trackedDisasters.Add(keyName);
 
 			if (trackedDisasters.Count == 1)
 			{
-				SetGeneralInfo(keyName);
+				UpdateGeneralDisasterInfo(keyName);
+				currentDisasterController = ctrl;
+				ChangeSimulationInfo(0);
 				ctrl.Activate();
-				ctrl.ChangePosition(position);
-				UpdateARUI();
 			}
 
 		}
+
+		SwitchARUI();
 	}
 
-	public void HandleRemovedImage (string keyName)
+	private void HandleRemovedImage (string disasterKeyName)
 	{
-		if (trackedDisasters.Contains(keyName))
+		if (trackedDisasters.Contains(disasterKeyName))
 		{
-			disasterDictionary[keyName].Deactivate();
-			trackedDisasters.Dequeue();
-
-			if (trackedDisasters.Count != 0)
+			if (disasterKeyName == trackedDisasters[0])
 			{
-				BaseDisasterController ctrl = disasterDictionary[trackedDisasters.Peek()];
-				SetGeneralInfo(keyName);
-				ctrl.Activate();
-			}
 
-			UpdateARUI();
+				DeactivateCurrentDisaster();
+
+				if (trackedDisasters.Count != 0)
+				{
+					ActivateNextDisaster();
+				}
+
+				SwitchARUI();
+			} 
+			else
+			{
+				trackedDisasters.Remove(disasterKeyName);
+			}
 		}
 	}
 
-	private void UpdateARUI()
+	public void OnSliderValueChange (float sliderValue)
+	{
+		if (currentDisasterController != null)
+		{
+			currentDisasterController.ChangeDisasterLevel(sliderValue);
+			ChangeSimulationInfo(sliderValue);
+		}
+	}
+
+	private void ResetSliderValue ()
+	{
+		simulationSlider.value = 0;
+	}
+
+	private void SwitchARUI()
 	{
 		if (trackedDisasters.Count == 0)
 		{
@@ -93,7 +114,28 @@ public class DisasterManager : MonoBehaviour
 		}
 	}
 
-	private void SetGeneralInfo (string keyname)
+	private void DeactivateCurrentDisaster ()
+	{
+		simulationPanelController.ChangeStrengthText(0.ToString());
+		currentDisasterController.Deactivate();
+		ResetSliderValue();
+		currentDisasterController = null;
+		trackedDisasters.RemoveAt(0);
+
+	}
+
+	private void ActivateNextDisaster ()
+	{
+		string newKeyName = trackedDisasters[0];
+		BaseDisasterController ctrl = disasterDictionary[newKeyName];
+		ctrl.ChangeDisasterLevel(0);
+		UpdateGeneralDisasterInfo(newKeyName);
+		ChangeSimulationInfo(0);
+		currentDisasterController = ctrl;
+		ctrl.Activate();
+	}
+
+	private void UpdateGeneralDisasterInfo (string keyname)
 	{
 		BaseDisasterController controller = disasterDictionary[keyname];
 		SO_ARDisasterProfiles profiles = controller.GetProfiles;
@@ -110,6 +152,17 @@ public class DisasterManager : MonoBehaviour
 				profiles.GetHeaderImage,
 				profiles.GetContentText
 			);
+	}
+
+	private void ChangeSimulationInfo (float index)
+	{
+		if (currentDisasterController != null)
+		{
+			SO_ARDisasterProfiles profiles = currentDisasterController.GetProfiles;
+			float strength = profiles.GetDisasterStreght((int)index);
+			simulationPanelController.ChangeStrengthText(strength.ToString());
+			simulationPanelController.ChangeRiskUI((int)index);
+		}
 	}
 
 }
