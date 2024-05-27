@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2195602078359980272
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6708526740626472405}
+    m_Modifications:
+    - target: {fileID: 6920914375827397182, guid: e4aa13c2ca4244e4488fded128e485b5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920914375827397182, guid: e4aa13c2ca4244e4488fded128e485b5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920914375827397182, guid: e4aa13c2ca4244e4488fded128e485b5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920914375827397182, guid: e4aa13c2ca4244e4488fded128e485b5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920914375827397182, guid: e4aa13c2ca4244e4488fded128e485b5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920914375827397182, guid: e4aa13c2ca4244e4488fded128e485b5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920914375827397182, guid: e4aa13c2ca4244e4488fded128e485b5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920914375827397182, guid: e4aa13c2ca4244e4488fded128e485b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920914375827397182, guid: e4aa13c2ca4244e4488fded128e485b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6920914375827397182, guid: e4aa13c2ca4244e4488fded128e485b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7730382960303947908, guid: e4aa13c2ca4244e4488fded128e485b5, type: 3}
+      propertyPath: m_Name
+      value: Banjir KMM Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e4aa13c2ca4244e4488fded128e485b5, type: 3}
+--- !u!4 &9112011857724936910 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6920914375827397182, guid: e4aa13c2ca4244e4488fded128e485b5, type: 3}
+  m_PrefabInstance: {fileID: 2195602078359980272}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4200950859968927775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64,8 +126,21 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 96ab4023998d06c4d86b1b467b76ef50, type: 2}
+    - target: {fileID: 8636624194473377548, guid: 464a2f0d45807e84a82c77b0cc6240b1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2761474600724848273, guid: 464a2f0d45807e84a82c77b0cc6240b1, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7446067609980511690, guid: 464a2f0d45807e84a82c77b0cc6240b1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9112011857724936910}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 464a2f0d45807e84a82c77b0cc6240b1, type: 3}
+--- !u!4 &6708526740626472405 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7446067609980511690, guid: 464a2f0d45807e84a82c77b0cc6240b1, type: 3}
+  m_PrefabInstance: {fileID: 4200950859968927775}
+  m_PrefabAsset: {fileID: 0}
