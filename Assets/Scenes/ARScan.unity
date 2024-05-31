@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &425531329
+--- !u!1001 &1833553419
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -151,18 +151,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2025392743588105126, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2025392743588105126, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2025392743588105126, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4635054549924464089, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -210,10 +198,6 @@ PrefabInstance:
     - target: {fileID: 4800502057057989640, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5099279425631983795, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 5264443268778670383, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
       propertyPath: m_AnchorMax.y
@@ -271,22 +255,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7954968956835239301, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7954968956835239301, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7954968956835239301, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7954968956835239301, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8079305678819713949, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
       propertyPath: m_Name
       value: AR Scene
@@ -336,4 +304,4 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 425531329}
+  - {fileID: 1833553419}

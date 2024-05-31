@@ -1,98 +1,64 @@
-using System.Collections.Generic;
-
+using System;
 using UnityEngine;
-using UnityEngine.XR.ARFoundation;
-using UnityEngine.XR.ARSubsystems;
+using Vuforia;
+
+/// <summary>
+/// A custom script to bridge Default Observer Event Handler and Object Manager
+/// also to notify others script which one marker is found based on marker database
+/// 
+/// This script is made because event in  Default Observer Event Handler is non overrideable
+/// 
+/// This will always reference to Image Target Behaviour in runtime
+/// Beware when change the Image Target Behaviour image target
+/// </summary>
 
 public class ARTrackerListener : MonoBehaviour
 {
-	[SerializeField] private ARTrackedImageManager m_trackedImageManager;
-	[SerializeField] private TMPro.TextMeshProUGUI debugText;
 
-	private List<string> activeTrackingList = new List<string>();
+	[SerializeField] private ImageTargetBehaviour m_ImageTarget;
 
-	public System.Action<string, Vector3> OnImageAdded;
-	public System.Action<string> OnImageRemoved;
+	public Action<string> notifyImageFound;
+	public Action<string> notifyImageLost;
 
-	#region UNITY_LIFECYCLE
-
-	public void Start ()
+	private void Start ()
 	{
-		if (m_trackedImageManager == null)
+		// ImageTargetBehaviour is used to automaticly get image name
+		// This will automatically get the script from gameobject if null
+		// For better use, consider put this script in same gameobject as Image Target Behaviour
+		if (m_ImageTarget == null)
 		{
-			m_trackedImageManager = GetComponent<ARTrackedImageManager>();
-		}
-
-		m_trackedImageManager.trackedImagesChanged += OnImageChanged;
-	}
-
-	public void OnDisable ()
-	{
-		m_trackedImageManager.trackedImagesChanged -= OnImageChanged;
-	}
-
-	#endregion
-
-	#region IMAGE_TRACKING
-
-	private void OnImageChanged (ARTrackedImagesChangedEventArgs args)
-	{
-
-		foreach (ARTrackedImage trackedImage in args.added)
-		{
-			if (IsTracking(trackedImage) && !IsOnList(trackedImage) && GetRefName(trackedImage) != null) TrackImage(trackedImage);
-		}
-
-		foreach (ARTrackedImage trackedImage in args.updated)
-		{
-			if (IsTracking(trackedImage) && !IsOnList(trackedImage) && GetRefName(trackedImage) != null)
-			{
-				TrackImage(trackedImage);
-			}
-			else if (!IsTracking(trackedImage) && IsOnList(trackedImage) && GetRefName(trackedImage) != null)
-			{
-				UnTrackImage(trackedImage);
-			}
+			m_ImageTarget = GetComponent<ImageTargetBehaviour>();
 		}
 
 	}
 
-	private void TrackImage (ARTrackedImage trackedImage)
+	// Call this in DefaultObserverEventHandler from the inspector
+	// Function is used if image is found, so assign this in On Target Found
+	// This will invoke event with target name to ObjectManager
+	public void HandleImageFound ()
 	{
-		//Debug.Log($"Image added or continue tracking: {GetRefName(trackedImage)}");
-
-		DebugScreen($"Image added or continue tracking: {GetRefName(trackedImage)}");
-
-		OnImageAdded?.Invoke(GetRefName(trackedImage), trackedImage.transform.position);
-		activeTrackingList.Add(GetRefName(trackedImage));
+		if (m_ImageTarget != null)
+		{
+			notifyImageFound?.Invoke(m_ImageTarget.TargetName);
+		}
+		else
+		{
+			Debug.LogWarning("WARNING! Function called but Image Target Behaviour is null. Abandon event!");
+		}
 	}
-
-	private void UnTrackImage (ARTrackedImage trackedImage)
+	// Call this in DefaultObserverEventHandler from the inspector
+	// Function is used if image is lost, so assign this in On Target Lost
+	// This will invoke event with target name to ObjectManager
+	public void HandleImageLost ()
 	{
-		//Debug.Log($"Image removed or lost tracking: {GetRefName(trackedImage)}");
-
-		DebugScreen($"Image removed or lost tracking: {GetRefName(trackedImage)}");
-
-		activeTrackingList.Remove(GetRefName(trackedImage));
-		OnImageRemoved?.Invoke(GetRefName(trackedImage));
+		if (m_ImageTarget != null)
+		{
+			notifyImageLost?.Invoke(m_ImageTarget.TargetName);
+		}
+		else
+		{
+			Debug.LogWarning("WARNING! Function called but Image Target Behaviour is null. Abandon event!");
+		}
 	}
-
-	#endregion
-
-	#region GETTERS
-
-	private string GetRefName (ARTrackedImage refImage) => refImage.referenceImage.name;
-
-	private bool IsTracking (ARTrackedImage trackedImage) => trackedImage.trackingState == TrackingState.Tracking;
-
-	private bool IsOnList (ARTrackedImage trackedImage) => activeTrackingList.Contains(GetRefName(trackedImage));
-
-	#endregion
-
-	#region DEBUG
-
-	private void DebugScreen(string message) { debugText.text += "\n===|||===\n" + message; }
-
-	#endregion
 
 }
