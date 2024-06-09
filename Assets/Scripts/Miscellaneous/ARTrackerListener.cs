@@ -43,7 +43,7 @@ public class ARTrackerListener : MonoBehaviour
 		}
 		else
 		{
-			Debug.LogWarning("WARNING! Function called but Image Target Behaviour is null. Abandon event!");
+			//Debug.LogWarning("WARNING! Function called but Image Target Behaviour is null. Abandon event!");
 		}
 	}
 	// Call this in DefaultObserverEventHandler from the inspector
@@ -57,7 +57,7 @@ public class ARTrackerListener : MonoBehaviour
 		}
 		else
 		{
-			Debug.LogWarning("WARNING! Function called but Image Target Behaviour is null. Abandon event!");
+			//Debug.LogWarning("WARNING! Function called but Image Target Behaviour is null. Abandon event!");
 		}
 	}
 
