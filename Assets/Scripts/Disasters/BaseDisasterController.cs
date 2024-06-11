@@ -45,14 +45,14 @@ public class BaseDisasterController : MonoBehaviour
 	#endregion
 
 	#region AR EVENT HANDLER
-	public void HandleFound ()
+	public virtual void HandleFound ()
 	{
 		ChangeDisasterLevel(0);
 		isActive = true;
 		ModelActivation();
 	}
 
-	public void HandleLost ()
+	public virtual void HandleLost ()
 	{
 		isActive = false;
 		ModelActivation();
@@ -67,26 +67,26 @@ public class BaseDisasterController : MonoBehaviour
 
 	#region ANIMATIONS
 
-	public void ChangeDisasterLevel (float value)
+	public virtual void ChangeDisasterLevel (float value)
 	{
 		switch (value)
 		{
 			case 0:
-				TriggerAnimation(lowTrigger);
+				ChangeAnimation(lowTrigger);
 				break;
 			case 1:
-				TriggerAnimation(mediumTrigger);
+				ChangeAnimation(mediumTrigger);
 				break;
 			case 2:
-				TriggerAnimation(highTrigger);
+				ChangeAnimation(highTrigger);
 				break;
 			default:
-				TriggerAnimation(lowTrigger);
+				ChangeAnimation(lowTrigger);
 				break;
 		}
 	}
 
-	public void TriggerAnimation (string triggerName)
+	private void ChangeAnimation (string triggerName)
 	{
 		animator.SetTrigger(triggerName);
 	}
