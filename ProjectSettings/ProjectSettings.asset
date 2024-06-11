@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: EnigmaKeyCode
+  companyName: D3TI
   productName: SIMBA AR Mitigasi
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -137,7 +137,7 @@ PlayerSettings:
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
-  bundleVersion: Alpha 0.1
+  bundleVersion: Beta 0.2
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -158,7 +158,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.EnigmaKeyCode.SIMBAARMitigasi
+    Android: com.D3TI.SIMBAARMitigasi
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -283,7 +283,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 10bd85fbac3952c4490f7cc8c9a9f454, type: 3}
+      m_Icon: {fileID: 2800000, guid: 979280b78c3eb5e4dbc440a9b1728b30, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7842269878597854545
+--- !u!1 &5736845579766192479
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5128744066423005268}
-  - component: {fileID: 6461872978346779125}
-  - component: {fileID: 7074658856562047790}
-  - component: {fileID: 294887176962129581}
-  - component: {fileID: 2629318378996519496}
+  - component: {fileID: 7234185908791073882}
+  - component: {fileID: 8855527620015021563}
+  - component: {fileID: 4712512267094738720}
+  - component: {fileID: 2837177727093359267}
+  - component: {fileID: 519391073288040006}
   m_Layer: 0
   m_Name: ImageTarget Flood
   m_TagString: Untagged
@@ -20,13 +20,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5128744066423005268
+--- !u!4 &7234185908791073882
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7842269878597854545}
+  m_GameObject: {fileID: 5736845579766192479}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -35,26 +35,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6461872978346779125
+--- !u!114 &8855527620015021563
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7842269878597854545}
+  m_GameObject: {fileID: 5736845579766192479}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1272d00dbfeec4439750269e1396d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ImageTarget: {fileID: 7074658856562047790}
---- !u!114 &7074658856562047790
+  m_ImageTarget: {fileID: 4712512267094738720}
+--- !u!114 &4712512267094738720
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7842269878597854545}
+  m_GameObject: {fileID: 5736845579766192479}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
@@ -74,21 +74,21 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 2629318378996519496}
---- !u!114 &294887176962129581
+  mPreview: {fileID: 519391073288040006}
+--- !u!114 &2837177727093359267
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7842269878597854545}
+  m_GameObject: {fileID: 5736845579766192479}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusFilter: 1
-  UsePoseSmoothing: 0
+  StatusFilter: 0
+  UsePoseSmoothing: 1
   AnimationCurve:
     serializedVersion: 2
     m_Curve:
@@ -116,7 +116,7 @@ MonoBehaviour:
   OnTargetFound:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6461872978346779125}
+      - m_Target: {fileID: 8855527620015021563}
         m_TargetAssemblyTypeName: ARTrackerListener, Assembly-CSharp
         m_MethodName: HandleImageFound
         m_Mode: 1
@@ -131,7 +131,7 @@ MonoBehaviour:
   OnTargetLost:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6461872978346779125}
+      - m_Target: {fileID: 8855527620015021563}
         m_TargetAssemblyTypeName: ARTrackerListener, Assembly-CSharp
         m_MethodName: HandleImageLost
         m_Mode: 1
@@ -143,22 +143,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2629318378996519496
+--- !u!114 &519391073288040006
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7842269878597854545}
+  m_GameObject: {fileID: 5736845579766192479}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 7074658856562047790}
+  mObserverBehaviour: {fileID: 4712512267094738720}
   mHiddenRoot: {fileID: 0}
   mTargetName: flood
   mDatasetName: Vuforia/simba-ar_marker_db.xml
-  mCastedBehaviour: {fileID: 7074658856562047790}
+  mCastedBehaviour: {fileID: 4712512267094738720}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}

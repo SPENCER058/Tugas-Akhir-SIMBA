@@ -76,7 +76,7 @@ public class DisasterManager : MonoBehaviour
 	#region AR HANDLER
 	private void ImageTrackedFound (string targetName)
 	{
-		Debug.Log("On Target Found:" + targetName);
+		//Debug.Log("On Target Found:" + targetName);
 
 		// Search in Dictionary
 		BaseDisasterController ctrl = disasterControllerDictionary[targetName];
@@ -103,7 +103,7 @@ public class DisasterManager : MonoBehaviour
 
 	private void ImageTrackedLost (string targetName)
 	{
-		Debug.Log("On Target Lost:" + targetName);
+		//Debug.Log("On Target Lost:" + targetName);
 
 		if (trackedMarker.Contains(targetName))
 		{
