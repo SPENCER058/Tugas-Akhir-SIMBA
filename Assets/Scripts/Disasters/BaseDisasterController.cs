@@ -16,6 +16,7 @@ public class BaseDisasterController : MonoBehaviour
 	public SO_ARDisasterProfiles GetProfiles { get { return profile; } }
 
 	private bool isActive = false;
+	private string triggerToRemove;
 
 	#region UPDATE POSITION
 	private void Update ()
@@ -47,9 +48,10 @@ public class BaseDisasterController : MonoBehaviour
 	#region AR EVENT HANDLER
 	public virtual void HandleFound ()
 	{
-		ChangeDisasterLevel(0);
 		isActive = true;
 		ModelActivation();
+		animator.Play("Low Disaster");
+		ChangeDisasterLevel(0);
 	}
 
 	public virtual void HandleLost ()
@@ -88,7 +90,13 @@ public class BaseDisasterController : MonoBehaviour
 
 	private void ChangeAnimation (string triggerName)
 	{
+		if (triggerToRemove != null) 
+		{
+			animator.ResetTrigger(triggerName);
+		}
+		
 		animator.SetTrigger(triggerName);
+		triggerToRemove = triggerName;
 	}
 
 	#endregion

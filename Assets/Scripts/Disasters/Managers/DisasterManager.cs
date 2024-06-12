@@ -29,6 +29,8 @@ public class DisasterManager : MonoBehaviour
 		{
 			disasterControllerDictionary.Add(disaster.DisasterKey, disaster.Controller);
 		}
+
+		disasterUIManager.Initialize ();
 	}
 
 	private void OnEnable ()
@@ -69,6 +71,7 @@ public class DisasterManager : MonoBehaviour
 			}
 		}
 
+		disasterUIManager.Release();
 		disasterUIManager.notifySliderChange -= ChangeSimulation;
 	}
 	#endregion
