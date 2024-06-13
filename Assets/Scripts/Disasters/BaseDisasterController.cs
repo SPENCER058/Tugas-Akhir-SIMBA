@@ -2,15 +2,13 @@ using UnityEngine;
 
 public class BaseDisasterController : MonoBehaviour
 {
-	[Header("Model & Anchor")]
-	[SerializeField] private GameObject model;
+	[Header("Position Anchor")]
 	[SerializeField] Transform positionAnchor;
 
-	[Header("Animations & Trigger Name")]
-	[SerializeField] private Animator animator;
-	[SerializeField] private string lowTrigger = "Low";
-	[SerializeField] private string mediumTrigger = "Medium";
-	[SerializeField] private string highTrigger = "High";
+	[Header("Models & Animations")]
+	[SerializeField] private GameObject lowModel;
+	[SerializeField] private GameObject mediumModel;
+	[SerializeField] private GameObject highModel;
 
 	[SerializeField] private SO_ARDisasterProfiles profile;
 	public SO_ARDisasterProfiles GetProfiles { get { return profile; } }
@@ -32,13 +30,13 @@ public class BaseDisasterController : MonoBehaviour
 
 		thisObj.position = positionAnchor.position;
 
-		// Get your targets right vector in world space
+		// Get your target's right vector in world space
 		var right = positionAnchor.right;
 
-		// If not anyway the case ensure that your objects up vector equals the world up vector
+		// Ensure that your object's up vector equals the world up vector
 		thisObj.up = Vector3.up;
 
-		// Align your objects right vector with the image target's right vector
+		// Align your object's right vector with the image target's right vector
 		// projected down onto the global XZ plane => erasing its Y component
 		thisObj.right = Vector3.ProjectOnPlane(right, Vector3.up);
 	}
@@ -47,49 +45,81 @@ public class BaseDisasterController : MonoBehaviour
 	#region AR EVENT HANDLER
 	public virtual void HandleFound ()
 	{
-		ChangeDisasterLevel(0);
 		isActive = true;
-		ModelActivation();
+		ChangeDisasterLevel(0);
 	}
 
 	public virtual void HandleLost ()
 	{
 		isActive = false;
-		ModelActivation();
+		DeactivateAll();
 	}
-
-	private void ModelActivation ()
-	{
-		model.SetActive(isActive);
-	}
-
 	#endregion
 
 	#region ANIMATIONS
-
 	public virtual void ChangeDisasterLevel (float value)
 	{
 		switch (value)
 		{
 			case 0:
-				ChangeAnimation(lowTrigger);
+				ActivateModel(lowModel);
 				break;
 			case 1:
-				ChangeAnimation(mediumTrigger);
+				ActivateModel(mediumModel);
 				break;
 			case 2:
-				ChangeAnimation(highTrigger);
+				ActivateModel(highModel);
 				break;
 			default:
-				ChangeAnimation(lowTrigger);
+				ActivateModel(lowModel);
 				break;
 		}
 	}
 
-	private void ChangeAnimation (string triggerName)
+	private void ActivateModel (GameObject model)
 	{
-		animator.SetTrigger(triggerName);
+		DeactivateAll();
+		if (model != null)
+		{
+			model.SetActive(true);
+			ActivateChildComponents(model);
+		}
 	}
 
+	private void DeactivateAll ()
+	{
+		DeactivateModel(lowModel);
+		DeactivateModel(mediumModel);
+		DeactivateModel(highModel);
+	}
+
+	private void DeactivateModel (GameObject model)
+	{
+		if (model != null)
+		{
+			model.SetActive(false);
+			DeactivateChildComponents(model);
+		}
+	}
+
+	public virtual void ActivateChildComponents (GameObject model)
+	{
+		// Activate animator
+		var animator = model.GetComponentInChildren<Animator>();
+		if (animator != null)
+		{
+			animator.Play(0, -1, 0);
+		}
+	}
+
+	public virtual void DeactivateChildComponents (GameObject model)
+	{
+		// Deactivate animator
+		var animator = model.GetComponentInChildren<Animator>();
+		if (animator != null)
+		{
+			animator.StopPlayback();
+		}
+	}
 	#endregion
 }

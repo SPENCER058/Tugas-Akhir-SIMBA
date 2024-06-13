@@ -11,6 +11,20 @@ public class DisasterUIManager : MonoBehaviour
 
 	public System.Action<float> notifySliderChange;
 
+	#region GENERALS
+
+	public void Initialize ()
+	{
+		simulationSlider.onValueChanged.AddListener(OnSliderValueChange);
+	}
+
+	public void Release ()
+	{
+		simulationSlider.onValueChanged.RemoveAllListeners();
+	}
+
+	#endregion
+
 	#region SIMULATION SLIDER
 	public void OnSliderValueChange (float sliderValue) => notifySliderChange?.Invoke(sliderValue);
 
