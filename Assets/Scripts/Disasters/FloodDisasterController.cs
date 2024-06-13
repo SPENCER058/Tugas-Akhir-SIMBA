@@ -2,47 +2,27 @@ using UnityEngine;
 
 public class FloodDisasterController : BaseDisasterController
 {
-	[Header("Particles System")]
-	[SerializeField] private ParticleSystem _particleSystem;
-	[SerializeField] private float _lowSpeed;
-	[SerializeField] private float _mediumSpeed;
-	[SerializeField] private float _highSpeed;
-
-	public override void HandleFound ()
+	public override void ActivateChildComponents (GameObject model)
 	{
-		base.HandleFound();
-		_particleSystem.Play();
-	}
+		base.ActivateChildComponents(model);
 
-	public override void HandleLost ()
-	{
-		base.HandleLost();
-		_particleSystem.Stop();
-	}
-
-	public override void ChangeDisasterLevel (float value)
-	{
-		base.ChangeDisasterLevel(value);
-		ChangeParticlesSpeed(value);
-	}
-
-	private void ChangeParticlesSpeed (float value)
-	{
-		var main = _particleSystem.main;
-		switch (value)
+		// Activate particle system
+		var particleSystems = model.GetComponentsInChildren<ParticleSystem>();
+		foreach (var ps in particleSystems)
 		{
-			case 0:
-				main.simulationSpeed = _lowSpeed;
-				break;
-			case 1:
-				main.simulationSpeed = _mediumSpeed;
-				break;
-			case 2:
-				main.simulationSpeed = _highSpeed;
-				break;
-			default:
-				main.simulationSpeed = _lowSpeed;
-				break;
+			ps.Play();
+		}
+	}
+
+	public override void DeactivateChildComponents (GameObject model)
+	{
+		base.DeactivateChildComponents(model);
+
+		// Deactivate particle system
+		var particleSystems = model.GetComponentsInChildren<ParticleSystem>();
+		foreach (var ps in particleSystems)
+		{
+			ps.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
 		}
 	}
 }
