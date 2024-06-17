@@ -22,32 +22,25 @@ public class UIAudioSettingButton : MonoBehaviour
 	{
 		isOn = _prefSave.IsOn();
 
-		if (isOn)
-		{
-			_button.image.sprite = _enabledIcon;
-		}
-		else
-		{
-			_button.image.sprite = _disabledIcon;
-		}
+		_button.image.sprite = isOn ? _enabledIcon : _disabledIcon;
 	}
 
 	public void OnClickButton ()
 	{
+		isOn = !isOn;
+		_button.image.sprite = isOn ? _enabledIcon : _disabledIcon;
+
 		if (isOn)
 		{
-			isOn = false;
-			_button.image.sprite = _disabledIcon;
-			OnMute.Invoke();
+			OnPlay.Invoke();
 		}
 		else
 		{
-			isOn = true;
-			_button.image.sprite = _enabledIcon;
-			OnPlay.Invoke();
+			OnMute.Invoke();
 		}
 
 		_prefSave.SetValue(isOn);
 	}
+
 
 }
