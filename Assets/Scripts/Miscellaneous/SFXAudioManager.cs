@@ -2,9 +2,8 @@ using UnityEngine;
 
 namespace SIMBA.Managers
 {
-	public class AudioManager : MonoBehaviour
+	public class SFXAudioManager : MonoBehaviour
 	{
-		[SerializeField] private AudioSource _bgmAudioSource;
 		[SerializeField] private AudioSource _sfxAudioSource;
 
 		[Header("SFX Audio")]
