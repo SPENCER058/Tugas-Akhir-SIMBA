@@ -22,4 +22,11 @@ MonoBehaviour:
   - 200
   _infoPanelTitleImage: {fileID: 21300000, guid: 066c9aa66615aff45b4e14248464205b, type: 3}
   _headerImage: {fileID: 21300000, guid: c5d28056d6c847e4c8a01850371c8379, type: 3}
-  _contentText: Banjir
+  _contentText: Sebuah bencana banjir yang melanda provinsi DKI Jakarta pada 1 Januari
+    2020. Bencana ini mengakibatkan lebih dari 173.000 warga harus mengungsi, dan
+    lebih dari 50 nyawa melayang. Banjir terjadi akibat curah hujan ekstrem yang
+    melebihi 150 mm per hari, merata di seluruh wilayah DKI Jakarta. Hujan deras
+    mulai melanda Jakarta dan sekitarnya sejak sore 30 Desember 2019 hingga malam
+    31 Desember 2019, menyebabkan banyak daerah aliran sungai yang meluap. Selain
+    itu, jebolnya tanggul sungai di IKPN Bintaro Pesanggrahan turut memperparah situasi
+    banjir ini.
