@@ -21,14 +21,13 @@ public class UIAudioSettingButton : MonoBehaviour
 	private void Awake ()
 	{
 		isOn = _prefSave.IsOn();
-
-		_button.image.sprite = isOn ? _enabledIcon : _disabledIcon;
+		UpdateButton();
 	}
 
 	public void OnClickButton ()
 	{
 		isOn = !isOn;
-		_button.image.sprite = isOn ? _enabledIcon : _disabledIcon;
+		UpdateButton();
 
 		if (isOn)
 		{
@@ -42,5 +41,9 @@ public class UIAudioSettingButton : MonoBehaviour
 		_prefSave.SetValue(isOn);
 	}
 
+	private void UpdateButton ()
+	{
+		_button.image.sprite = isOn ? _enabledIcon : _disabledIcon;
+	}
 
 }
