@@ -14,39 +14,66 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _panelTitleImage: {fileID: 21300000, guid: 066c9aa66615aff45b4e14248464205b, type: 3}
   _headerImage: {fileID: 21300000, guid: c5d28056d6c847e4c8a01850371c8379, type: 3}
-  _contentText: 'Banjir yang sering terjadi di Indonesia adalah Banjir Bengawan Solo.
-    Sungai Bengawan Solo memiliki debit yang besar & daerah aliran sungai yang luas,
-    sehingga rentan terhadap banjir saat musim hujan.
-
-
-    Curah hujan yang tinggi
-    dalam jangka waktu yang cukup lama dapat menyebabkan luapan air di sungai. Kondisi
-    ini diperparah oleh kondisi lahan yang sudah jenuh air dan kapasitas sungai yang
-    terbatas untuk menampung aliran air yang melimpah.
-
-
-    Dampak Banjir:
-
-    Banjir
-    menyebabkan kerusakan pada pemukiman penduduk, fasilitas infrastruktur & lahan
-    pertanian. Selain itu, mengakibatkan hilangnya nyawa manusia, kerugian ekonomi,
-    penyakit & mengganggu kehidupan sehari-hari masyarakat.
-
-
-    Mitigasi Banjir:
-
-    Pembangunan
-    tanggul, saluran irigasi & embung untuk mengendalikan aliran sungai & memperlambat
-    aliran air saat banjir. Selain itu, penyuluhan kepada masyarakat tentang bahaya
-    banjir & perencanaan tata ruang yang lebih baik juga merupakan bagian dari upaya
-    mitigasi.
-
-    Sistem pemantauan dan peringatan dini telah diimplementasikan
-    untuk memantau kondisi sungai dan potensi banjir.
-
-
-    Kesadaran masyarakat
-    akan bahaya banjir, pengetahuan tentang tindakan evakuasi & kesiapan dalam menghadapi
-    bencana dapat membantu mengurangi risiko dan kerugian akibat banjir. Masyarakat
-    juga dapat terlibat dalam kegiatan pembersihan sungai, pengelolaan sampah & konservasi
-    lingkungan untuk menjaga keberlanjutan sungai Bengawan Solo yang terdampak.'
+  _contentText: "Badan Nasional Penanggulangan Bencana (BNPB) mengatakan bahwa banjir
+    merupakan peristiwa atau keadaan terendamnya daratan karena debit air yang meningkat
+    dan melebihi batas normal. Banjir sendiri merupakan bencana yang paling sering
+    terjadi di Indonesia. Hampir setiap tahun bencana ini melanda kota-kota di Indonesia,
+    terutama saat musim penghujan tiba.\n\nDampak Banjir:\nBanjir menyebabkan kerusakan
+    pada pemukiman penduduk, fasilitas infrastruktur & lahan pertanian. Selain itu,
+    mengakibatkan hilangnya nyawa manusia, kerugian ekonomi, penyakit & mengganggu
+    kehidupan sehari-hari masyarakat.\n\nMITIGASI BANJIR:\nPersiapan masyarakat menghadapi
+    banjir (pra bencana) :\r\n1.\tMengetahui istilah-istilah peringatan yang berhubungan
+    dengan bahaya banjir, seperti Siaga I sampai dengan Siaga IV dan langkah-langkah
+    apa yang harus dilakukan. \r\n2.\tMengetahui tingkat kerentanan tempat tinggal,
+    apakah di zona rawan banjir (bisa menggunakan aplikasi inarisk). \r\n3.\tMengetahui
+    cara-cara untuk melindungi rumah dari banjir. \r\r\n4.\tMengetahui saluran dan
+    jalur yang sering dilalui air banjir dan apa dampaknya untuk rumah. \r\n5.\tMelakukan
+    persiapan untuk evakuasi, termasuk emmahami rute evakuasi dan daerah yang lebih
+    tinggi. \r\n6.\tMembicarakan dengan anggota keluarga mengenai ancaman banjir
+    dan merencanakan tempat pertemuan apabila anggota keluarga terpencar-pencar.
+    \r\n7.\tMengetahui bantuan apa yang bisa diberikan apabila ada anggota keluarga
+    yang terkena banjir. \r\n8.\tMengetahui kebutuhan-kebutuhan khusus anggota keluarga
+    dan tetangga apabila banjir terjadi. \r\n9.\tMembuat persiapan untuk hidup mandiri
+    selama sekurangnya tiga hari, misalnya persiapan tas siaga bencana, penyediaan
+    makanan dan air minum. \r\n10.\tMengetahui bagaimana mematikan air, listrik dan
+    gas. \r\n11.\tMempertimbangkan asuransi banjir. \r\n12.\tMenyimpan berbagai dokumen
+    penting ditempat yang aman. \r\n13.\tHindari membangun di tempat rawan banjir
+    kecuali ada upaya penguatan dan peninggian bangunan rumah. \r\n14.\tPerhatikan
+    berbagai instrumen listrik yang dapat memicu bahaya saat bersentuhan dengan air
+    banjir. \r\n15.\tTurut serta mendirikan tenda pengungsian dan pembuatan dapur
+    umum. \r\n16.\tMenggunakan air bersih dengan efisien. \r\n\r\nYang dapat dilakukan
+    saat banjir :\r\n1.\tSegera evakuasi ke tempat yang lebih tinggi. \r\n2.\tWaspada
+    terhadap arus bawah, saluran air, kubangan, dan tempat-tempat lain yang tergenang
+    air. \r\n3.\tApabila harus bersiap untuk evakuasi: amankan rumah. Apabila masih
+    tersedia waktu, tempatkan perabot di luar rumah atau di tempat yang aman dari
+    banjir. Barang yang lebih berharga diletakan pada bagian yang lebih tinggi di
+    dalam rumah. \r\n4.\tMatikan semua jaringan listrik apabila ada instruksi dari
+    pihak berwenang. Cabut alat-alat yang masih tersambung dengan listrik. Jangan
+    menyentuh peralatan yang bermuatan listrik apabila sedang berdiri di atas/dalam
+    air. \r\n5.\tJika ada perintah evakuasi dan harus meninggalkan rumah: Jangan
+    berjalan di arus air, karena berkemungkinan membuat jatuh. \r\n6.\tApabila harus
+    berjalan di air, berjalanlah pada pijakan yang tidak bergerak. Gunakan tongkat
+    atau sejenisnya untuk memeriksa kepadatan tempat berpijak. \r\n7.\tJangan mengemudikan
+    mobil di wilayah banjir. Apabila air mulai naik, abaikan mobil dan keluarlah
+    ke tempat yang lebih tinggi. Apabila hal ini tidak dilakukan, mobil dapat tersapu
+    arus banjir dengan cepat. \r\n8.\tBersihkan dan siapkan penampungan air untuk
+    berjaga-jaga seandainya kehabisan air bersih. \r\n9.\tWaspada saluran air atau
+    tempat melintasnya air yang kemungkinan akan dilalui oleh arus yang deras karena
+    kerap kali banjir bandang tiba tanpa peringatan. \n\r\n\r\nPasca bencana :\r\n1.\tHindari
+    air banjir karena kemungkinan kontaminasi zat-zat berbahaya dan ancaman kesetrum.
+    \r\n2.\tWaspada dengan instalasi listrik. \r\n3.\tHindari air yang bergerak.
+    \r\n4.\tHindari area yang airnya baru saja surut karena jalan bisa saja keropos
+    dan ambles. \r\n5.\tHindari lokasi yang masih terkena bencana, kecuali jika pihak
+    yang berwenang membutuhkan sukarelawan. \r\n6.\tKembali ke rumah sesuai dengan
+    perintah dari pihak yang berwenang. \r\n7.\tTetap di luar gedung/rumah yang masih
+    dikelilingi air. \r\n8.\tHati-hati saat memasuki gedung karena ancaman kerusakan
+    yang tidak terlihat seperti pada fondasi. \r\n9.\tPerhatikan kesehatan dan keselamatan
+    keluarga dengan mencuci tangan menggunakan sabun dan air bersih jika terkena
+    air banjir. \r\n10.\tBuang makanan yang terkontaminasi air banjir. \r\n11.\tDengarkan
+    berita atau informasi mengenai kondisi air, serta di mana mendapatkan bantuan
+    perumahan/shelter, pakaian, dan makanan. \r\n12.\tDapatkan perawatan kesehatan
+    di fasilitas kesehatan terdekat. \r\n13.\tBersihkan tempat tinggal dan lingkungan
+    rumah dari sisa-sisa kotoran setelah banjir. \r\n14.\tLakukan pemberantasan sarang
+    nyamuk Pemberantasan Sarang Nyamuk (PSN). \r\n15.\tTerlibat dalam kaporitisasi
+    sumur gali. \r\n16.\tTerlibat dalam perbaikan jamban dan Saluran Pembuangan Air
+    Limbah (SPAL). \r\n"
