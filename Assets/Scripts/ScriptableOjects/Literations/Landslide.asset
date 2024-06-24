@@ -14,14 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _panelTitleImage: {fileID: 21300000, guid: c427cb08e57c6b34ab8c9168cf4d0057, type: 3}
   _headerImage: {fileID: 21300000, guid: 455a58a7bd09b1e47a7b922fdc0836b9, type: 3}
-  _contentText: "Tanah longsor adalah fenomena alam yang sering terjadi di daerah
-    Banjarnegara. \n\nFaktor Penyebab Tanah Longsor:\n- Curah Hujan Tinggi. \n- Kemiringan
-    Tanah. \n- Penggundulan hutan yang tidak terkendali (Deforestasi).\n- Pembangunan
-    yang tidak sesuai dengan teknik yang benar, seperti pemotongan lereng atau pembuangan
-    limbah yang tidak terkendali, dapat memicu tanah longsor.\n\nDampak Tanah Longsor:\n-
-    Kerusakan Lingkungan. \n- Kerugian Materi & Jiwa.\n\nTanda-tanda Potensi Tanah
-    Longsor:\n- Retakan pada tanah atau lereng. \n- Air tanah atau air sungai yang
-    tiba-tiba muncul atau menghilang. \n- Perubahan pola air sungai. \n-Getaran atau
-    suara gemuruh dari tanah atau lereng.\n- Pohon-pohon atau tiang listrik yang
-    miring.\n\nUpaya Pencegahan dan Mitigasi:\n- Konservasi Sumber Daya Alam. \n-
-    Perencanaan Tata Ruang yang Baik. \n- Sistem Peringatan Dini. \n- Edukasi Masyarakat."
+  _contentText: "Bencana longsor  merupakan salah satu  jenis  gerakan  massa  tanah 
+    atau  batuan, ataupun percampuran keduanya, menuruni atau keluar lereng akibat
+    dari terganggunya kestabilan tanah atau batuan penyusun lereng tersebut. Longsoran
+    (slide) menurut Hardiyatmo (2013:19) adalah gerakan material pembentuk lereng
+    yang diakibatkan oleh terjadinya keruntuhan geser di sepanjang satu atau lebih
+    bidang longsor.\r\n\r\nDaftar Penyebab :\r\n1.\tAktivitas gunung berapi. \r\n2.\tCurah
+    hujan tinggi. \r\n3.\tErosi. \r\n4.\tGempa bumi. \r\n5.\tLereng terjal. \r\n6.\tGetaran.
+    \r\n7.\tPenggundulan hutan. \r\n8.\tPenataan pertanian yang salah. \r\n9.\tLapuknya
+    bebatuan. \r\n10.\tKepadatan tanah kurang. \r\n\nPersiapan masyarakat menghadapi
+    tanah longsor :\r\n1.\tMengetahui dan terus memantau pusat informasi bencana.
+    \r\r\n2.\tMengurangi tingkat keterjalan lereng permukaan maupun air. \r\r\n3.\tpembuatan
+    bangunan penaha, jangkar (anchor) dan pilling.\r\r\n4.\tHindarkan daerah rawan
+    bencana untuk pembangunan pemukiman dan fasilitas utama lainnya. \r\n5.\tTerasering
+    dengan sistem drainase yang tepat. \r\n6.\tPenghijauan dengan tanaman yang sistem
+    perakarannya dalam dan jarak tempat yang tepat. \r\n7.\tMelakukan pemadatan tanah
+    di sekitar perumahan. \r\n8.\tPengenalan daerah rawan longsor. \r\n9.\tPembuatan
+    tanggul penahan untuk runtuhan batuan (rock fall). \r\n10.\tWaspada ketika curah
+    hujan tinggi. \r\n11.\tMembuat selokan yang kuat untuk mengalirkan air hujan.
+    \r\r\n12.\tJangan menggunduli hutan dan menebang pohon sembarangan. \r\n\r\nYang
+    dapat dilakukan saat tanah longsor :\r\n1.\tSegera evakuasi untuk menjauhi suara
+    gemuruh atau arah datangnya longsoran. \r\n2.\tApabila mendengar suara sirine
+    peringatan longsor, segera evakuasi ke arah zona evakuasi yang telah ditentukan.
+    \r\n\r\nYang dapat dilakukan setelah terjadi tanah longsor :\r\n1.\tHindari wilayah
+    longsor karena kondisi tanah yang labil. \r\r\n2.\tApabila hujan turun setelah
+    longsor terjadi, antisipasi longsor susulan. \r\n3.\tMembersihkan material pasca
+    bencana longsor. \r\n4.\tUpaya pemulihan trauma pada korban.\r\n"

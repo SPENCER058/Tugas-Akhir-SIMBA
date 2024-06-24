@@ -22,4 +22,11 @@ MonoBehaviour:
   - 10
   _infoPanelTitleImage: {fileID: 21300000, guid: 256a535899b1db64ea5a01305f961a4b, type: 3}
   _headerImage: {fileID: 21300000, guid: 1b7d3a2e94b4f754d88e427539b6d0df, type: 3}
-  _contentText: Tsunami
+  _contentText: Sebuah bencana tsunami melanda Banda Aceh, Nanggroe Aceh Darussalam,
+    Indonesia, serta wilayah Afrika dan Asia Tenggara pada 26 Desember 2004. Bencana
+    ini terjadi akibat gempa tektonik dahsyat dengan kekuatan 9,3 skala richter di
+    Samudera Hindia. Gempa tersebut disebabkan oleh interaksi lempeng tektonik Indo-Australia
+    dan Eurasia di dasar laut barat daya Sumatra. Akibatnya, gelombang tsunami setinggi
+    sekitar 30 meter dengan kecepatan mencapai 360 km/jam menerjang pantai-pantai
+    Aceh, mengakibatkan dampak dahsyat bagi lebih dari 200.000 jiwa masyarakat dan
+    wisatawan setempat.
