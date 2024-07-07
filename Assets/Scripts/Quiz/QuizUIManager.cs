@@ -159,4 +159,12 @@ public class QuizUIManager : MonoBehaviour
 	{
 		resultUI.SetResults(correct, total);
 	}
+
+	public void ButtonInteractable (bool isInteractable)
+	{
+		foreach(var button in answerButtons)
+		{
+			button.interactable = isInteractable;
+		}
+	}
 }

@@ -47,9 +47,9 @@ public class QuizResultUIController : MonoBehaviour
 		int incorrect = total - correct;
 		float percentage = ((float)correct / total) * 100f;
 
-		percentageText.text = $"Percentage: {percentage:0.##}%";
-		correctText.text = $"Correct: {correct}";
-		incorrectText.text = $"Incorrect: {incorrect}";
+		percentageText.text = $"Nilai: {percentage:0.##}";
+		correctText.text = $"Benar: {correct}";
+		incorrectText.text = $"Salah: {incorrect}";
 	}
 
 	/// <summary>

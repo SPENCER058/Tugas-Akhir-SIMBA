@@ -38,6 +38,8 @@ public class QuizManager : MonoBehaviour
 	/// </summary>
 	private void Start ()
 	{
+		quizUIManager.ButtonInteractable(false);
+
 		quizdataManager.Initialize(() =>
 		{
 			LoadQuiz();
@@ -65,7 +67,7 @@ public class QuizManager : MonoBehaviour
 	/// <summary>
 	/// Resets the quiz state, including resetting the UI and progress.
 	/// </summary>
-	private void ResetQuiz ()
+	public void ResetQuiz ()
 	{
 		currentQuestionIndex = 0;
 		correctAnswers = 0;
@@ -86,6 +88,7 @@ public class QuizManager : MonoBehaviour
 	/// <param name="index">The index of the selected answer.</param>
 	private void OnAnswerSelected (int index)
 	{
+
 		QuizQuestion question = quizData.questions[currentQuestionIndex];
 		bool isCorrect = question.options[index] == question.correct_option;
 
@@ -99,6 +102,8 @@ public class QuizManager : MonoBehaviour
 		currentQuestionIndex++;
 		quizUIManager.UpdateProgressBar((float)currentQuestionIndex / quizData.questions.Count);
 
+
+		quizUIManager.ButtonInteractable(false);
 		// Show the next question after a short delay
 		Invoke(nameof(ShowNextQuestion), nextQuestionDelay);
 	}
@@ -118,6 +123,8 @@ public class QuizManager : MonoBehaviour
 		quizUIManager.ResetButtonColors();
 
 		UpdateTextUI();
+
+		quizUIManager.ButtonInteractable(true);
 	}
 
 	private void UpdateTextUI ()
