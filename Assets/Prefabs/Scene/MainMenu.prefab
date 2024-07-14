@@ -1914,6 +1914,34 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8638297603032270931, guid: ce90f4d313ad2bf44856224b98e2eb25, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8638297603032270931, guid: ce90f4d313ad2bf44856224b98e2eb25, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8638297603032270931, guid: ce90f4d313ad2bf44856224b98e2eb25, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 636362639810939810}
+    - target: {fileID: 8638297603032270931, guid: ce90f4d313ad2bf44856224b98e2eb25, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8638297603032270931, guid: ce90f4d313ad2bf44856224b98e2eb25, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: PlayDisableSFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 8638297603032270931, guid: ce90f4d313ad2bf44856224b98e2eb25, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: SIMBA.Managers.SFXAudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8638297603032270931, guid: ce90f4d313ad2bf44856224b98e2eb25, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8686304043545573010, guid: ce90f4d313ad2bf44856224b98e2eb25, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

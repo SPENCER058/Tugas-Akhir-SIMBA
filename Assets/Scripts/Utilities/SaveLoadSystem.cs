@@ -37,13 +37,17 @@ public static class SaveLoadSystem
 	}
 
 	/// <summary>
-	/// Gets the full path to the specified file within the "Saves" directory.
+	/// Gets the full path to the specified file within the appropriate directory.
 	/// </summary>
 	/// <param name="fileName">The name of the file.</param>
 	/// <returns>The full path to the file.</returns>
 	private static string GetPath (string fileName)
 	{
+#if UNITY_EDITOR
 		string directory = Path.Combine(Application.dataPath, "Saves");
+#else
+				string directory = Path.Combine(Application.persistentDataPath, "Saves");
+#endif
 
 		// Create the directory if it doesn't exist
 		if (!Directory.Exists(directory))

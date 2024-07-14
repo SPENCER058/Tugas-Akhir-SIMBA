@@ -42,7 +42,7 @@ public class QuizManager : MonoBehaviour
 
 		quizdataManager.Initialize(() =>
 		{
-			LoadQuiz();
+			quizData = quizdataManager.CurrentQuizData;
 			ShowNextQuestion();
 		});
 	}
@@ -54,14 +54,6 @@ public class QuizManager : MonoBehaviour
 	{
 		quizUIManager.OnAnswerButtonClicked -= OnAnswerSelected;
 		quizResultUI.OnRestartRequested -= ResetQuiz;
-	}
-
-	/// <summary>
-	/// Loads quiz data from the data manager and resets the quiz.
-	/// </summary>
-	private void LoadQuiz ()
-	{
-		quizData = quizdataManager.LoadQuizData();
 	}
 
 	/// <summary>

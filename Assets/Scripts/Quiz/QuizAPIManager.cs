@@ -7,6 +7,7 @@ using UnityEngine.Networking;
 /// </summary>
 public class QuizAPIManager : MonoBehaviour
 {
+
 	private const string apiUrl = "http://127.0.0.1:8000/api/quiz";
 
 	/// <summary>
@@ -16,29 +17,42 @@ public class QuizAPIManager : MonoBehaviour
 	/// <returns>An IEnumerator for use with StartCoroutine.</returns>
 	public IEnumerator FetchQuizData (System.Action<QuizData> callback)
 	{
-		UnityWebRequest request = UnityWebRequest.Get(apiUrl);
-		yield return request.SendWebRequest();
-
-		// Check for errors immediately after the request completes
-		if (request.result == UnityWebRequest.Result.ConnectionError ||
-			request.result == UnityWebRequest.Result.DataProcessingError ||
-			request.result == UnityWebRequest.Result.ProtocolError)
+		if (Application.internetReachability == NetworkReachability.NotReachable)
 		{
-			//Debug.Log($"Error fetching quiz data: {request.error}");
 			callback?.Invoke(null);
 			yield break;
 		}
 
-		// Uncomment the following line to debug the received JSON
-		//Debug.Log("Received JSON: " + request.downloadHandler.text);
-		try
+		using (UnityWebRequest request = UnityWebRequest.Get(apiUrl))
 		{
-			QuizData quizData = JsonUtility.FromJson<QuizData>(request.downloadHandler.text);
-			callback?.Invoke(quizData);
-		}
-		catch (System.Exception e)
-		{
-			Debug.LogWarning("Error parsing quiz data: " + e.Message);
+			yield return request.SendWebRequest();
+
+			if (request.result == UnityWebRequest.Result.ConnectionError ||
+				request.result == UnityWebRequest.Result.DataProcessingError ||
+				request.result == UnityWebRequest.Result.ProtocolError)
+			{
+
+/*				// Specific handling for Android network issues
+				if (request.result == UnityWebRequest.Result.ConnectionError)
+				{
+					//Debug.Log("\nCheck if your Android device has internet access and the correct permissions.");
+				}*/
+
+				callback?.Invoke(null);
+				yield break;
+			}
+
+
+			try
+			{
+				QuizData quizData = JsonUtility.FromJson<QuizData>(request.downloadHandler.text);
+				callback?.Invoke(quizData);
+			}
+			catch (System.Exception e)
+			{
+				Debug.Log("Error parsing quiz data: " + e.Message);
+				callback?.Invoke(null);
+			}
 		}
 	}
 }

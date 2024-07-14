@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary>
@@ -17,7 +18,8 @@ public class QuizDataManager : MonoBehaviour
 	/// </summary>
 	public List<QuizQuestion> defaultQuestions;
 
-	private QuizData quizData;
+	public QuizData CurrentQuizData { get; private set; }
+
 	private const string fileName = "quizData";
 
 	/// <summary>
@@ -25,25 +27,15 @@ public class QuizDataManager : MonoBehaviour
 	/// </summary>
 	public void Initialize (System.Action onTaskCompleted)
 	{
-		StartCoroutine(InitializeQuizData(onTaskCompleted));
+		StartCoroutine(FetchFromAPI(onTaskCompleted));
 	}
 
 	/// <summary>
-	/// Coroutine that initializes the quiz data by checking for internet connectivity.
+	/// Coroutine that initializes the quiz data by attempting to fetch from the API.
 	/// </summary>
-	private IEnumerator InitializeQuizData (System.Action onTaskCompleted)
+	private IEnumerator FetchFromAPI (System.Action onTaskCompleted)
 	{
-		if (Application.internetReachability != NetworkReachability.NotReachable)
-		{
-			//Debug.Log("Internet Reachable");
-			yield return StartCoroutine(apiManager.FetchQuizData(OnFetchComplete));
-		}
-		else
-		{
-			//Debug.Log("Internet Not Reachable");
-			LoadQuizData();
-		}
-
+		yield return StartCoroutine(apiManager.FetchQuizData(OnFetchComplete));
 		onTaskCompleted?.Invoke();
 	}
 
@@ -53,20 +45,14 @@ public class QuizDataManager : MonoBehaviour
 	/// <param name="newData">The fetched quiz data.</param>
 	private void OnFetchComplete (QuizData newData)
 	{
-
-		//Debug.Log($"OnFetchComplete called with data: {newData}");
-
 		if (newData != null && newData.questions.Count > 0)
 		{
-			SetQuizData(newData);
-			AssignLocalIDs(quizData);
-			SaveLoadSystem.SaveData(newData, fileName);
+			CurrentQuizData = newData;
+			AssignLocalIDs(CurrentQuizData);
+			SaveQuestionData(newData, fileName);
 		}
-		else
-		{
-			//Debug.LogWarning("Quiz data is null or has no questions. Loading existing quiz data.");
-			LoadQuizData();
-		}
+
+		LoadLocalQuizData();
 	}
 
 	/// <summary>
@@ -85,27 +71,28 @@ public class QuizDataManager : MonoBehaviour
 	/// Loads quiz data from local storage or uses default questions if no data is found.
 	/// </summary>
 	/// <returns>The loaded or default quiz data.</returns>
-	public QuizData LoadQuizData ()
+	public QuizData LoadLocalQuizData ()
 	{
-		// First, try to load the quiz data if it's not already loaded
-		if (quizData == null)
+		CurrentQuizData = GetSaveData();
+
+		if (CurrentQuizData == null || CurrentQuizData.questions.Count == 0)
 		{
-			SetQuizData(SaveLoadSystem.LoadData<QuizData>(fileName));
+			QuizData defaultData = new QuizData { questions = new List<QuizQuestion>(defaultQuestions) };
+			SaveQuestionData(defaultData, fileName);
+			CurrentQuizData = GetSaveData();
 		}
 
-		// If still null or empty, use default questions
-		if (quizData == null || quizData.questions.Count == 0)
-		{
-			SetQuizData(new QuizData { questions = new List<QuizQuestion>(defaultQuestions) });
-			SaveLoadSystem.SaveData(quizData, fileName);
-		}
-
-		// Return the loaded or default quiz data
-		return quizData;
+		return CurrentQuizData;
 	}
 
-	private void SetQuizData (QuizData newData)
+	private void SaveQuestionData (QuizData newQuizData, string fileName)
 	{
-		quizData = newData;
+		SaveLoadSystem.SaveData(newQuizData, fileName);
 	}
+
+	private QuizData GetSaveData ()
+	{
+		return SaveLoadSystem.LoadData<QuizData>(fileName);
+	}
+
 }
