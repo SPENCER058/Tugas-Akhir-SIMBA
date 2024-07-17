@@ -206,7 +206,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1001 &3917493370713132681
+--- !u!1001 &3738027017999017514
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -254,10 +254,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -2195407104471221312, guid: 232c21c8bf0bb524cb04211f3cf2ca8a, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b0d9e2ab4fc8c954b9b1cb375fedbc92, type: 2}
     - target: {fileID: -1660384031183063813, guid: 232c21c8bf0bb524cb04211f3cf2ca8a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -276,26 +272,26 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 232c21c8bf0bb524cb04211f3cf2ca8a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6834269737514413094}
+      addedObject: {fileID: 4453713719455094334}
   m_SourcePrefab: {fileID: 100100000, guid: 232c21c8bf0bb524cb04211f3cf2ca8a, type: 3}
---- !u!4 &3591341471937112418 stripped
+--- !u!4 &3777001360723640769 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 232c21c8bf0bb524cb04211f3cf2ca8a, type: 3}
-  m_PrefabInstance: {fileID: 3917493370713132681}
+  m_PrefabInstance: {fileID: 3738027017999017514}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4223482164852880344 stripped
+--- !u!1 &4548998554767186811 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 232c21c8bf0bb524cb04211f3cf2ca8a, type: 3}
-  m_PrefabInstance: {fileID: 3917493370713132681}
+  m_PrefabInstance: {fileID: 3738027017999017514}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &6834269737514413094
+--- !u!95 &4453713719455094334
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4223482164852880344}
+  m_GameObject: {fileID: 4548998554767186811}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 96c98986bdefb244c86c9e92565f769e, type: 2}
@@ -398,7 +394,7 @@ PrefabInstance:
       addedObject: {fileID: 6149363254194554322}
     - targetCorrespondingSourceObject: {fileID: 5037117651743779294, guid: 464a2f0d45807e84a82c77b0cc6240b1, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3591341471937112418}
+      addedObject: {fileID: 3777001360723640769}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 464a2f0d45807e84a82c77b0cc6240b1, type: 3}
 --- !u!4 &349732726769723853 stripped
