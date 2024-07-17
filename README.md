@@ -1,2 +1,2 @@
-# Tugas-Akhir-AR-MITRA
-Tugas Akhir : Aplikasi Augmented Reality Mitigasi Bencana Tsunami Banjir dan Tanah Longsor
+# Tugas-Akhir-SIMBA-AR
+Tugas Akhir : Aplikasi Simulasi dan Mitigasi Bencana Alam Augmented Reality
