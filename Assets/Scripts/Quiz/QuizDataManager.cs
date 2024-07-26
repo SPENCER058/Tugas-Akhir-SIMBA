@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary>
@@ -11,32 +10,52 @@ public class QuizDataManager : MonoBehaviour
 	/// <summary>
 	/// Reference to the QuizAPIManager for fetching data from the API.
 	/// </summary>
-	public QuizAPIManager apiManager;
+	[SerializeField] private QuizAPIManager apiManager;
+
 
 	/// <summary>
 	/// List of default questions to be used if no data is found or fetched.
 	/// </summary>
-	public List<QuizQuestion> defaultQuestions;
+	[SerializeField] private string defaultVersion;
+
+	/// <summary>
+	/// List of default questions to be used if no data is found or fetched.
+	/// </summary>
+	[SerializeField] private List<QuizQuestion> defaultQuestions;
 
 	public QuizData CurrentQuizData { get; private set; }
+	public QuizData NewestQuizData { get; private set; }
 
 	private const string fileName = "quizData";
 
 	/// <summary>
 	/// Initializes the quiz data by attempting to fetch from the API or loading from local storage.
 	/// </summary>
-	public void Initialize (System.Action onTaskCompleted)
+	public void Initialize (System.Action<bool> onTaskCompleted)
 	{
+		LoadFromSave();
 		StartCoroutine(FetchFromAPI(onTaskCompleted));
 	}
+
+	public void UpdateData ()
+	{
+		SaveQuestionData(NewestQuizData, fileName);
+		CurrentQuizData = GetSaveData();
+	}
+
 
 	/// <summary>
 	/// Coroutine that initializes the quiz data by attempting to fetch from the API.
 	/// </summary>
-	private IEnumerator FetchFromAPI (System.Action onTaskCompleted)
+	private IEnumerator FetchFromAPI (System.Action<bool> onTaskCompleted)
 	{
 		yield return StartCoroutine(apiManager.FetchQuizData(OnFetchComplete));
-		onTaskCompleted?.Invoke();
+
+		if (CurrentQuizData == null) { LoadFromSave(); }
+
+		bool hasUpdates = CompareSaveData(CurrentQuizData, NewestQuizData);
+
+		onTaskCompleted?.Invoke(hasUpdates);
 	}
 
 	/// <summary>
@@ -45,14 +64,50 @@ public class QuizDataManager : MonoBehaviour
 	/// <param name="newData">The fetched quiz data.</param>
 	private void OnFetchComplete (QuizData newData)
 	{
+
 		if (newData != null && newData.questions.Count > 0)
 		{
-			CurrentQuizData = newData;
-			AssignLocalIDs(CurrentQuizData);
-			SaveQuestionData(newData, fileName);
+			NewestQuizData = newData;
+			AssignLocalIDs(NewestQuizData);
 		}
 
-		LoadLocalQuizData();
+		//LoadLocalQuizData();
+	}
+
+	/// <summary>
+	/// Loads quiz data from local storage or uses default questions if no data is found.
+	/// </summary>
+	/// <returns>The loaded or default quiz data.</returns>
+	public QuizData LoadFromSave ()
+	{
+		QuizData quizFromSave = GetSaveData();
+
+		if (quizFromSave == null || quizFromSave.questions.Count == 0)
+		{
+			QuizData defaultData = new QuizData { version = defaultVersion, questions = new List<QuizQuestion>(defaultQuestions) };
+			SaveQuestionData(defaultData, fileName);
+		}
+
+		CurrentQuizData = quizFromSave;
+
+		return CurrentQuizData;
+	}
+
+	/// <summary>
+	/// Compares the saved quiz data with the newly fetched data.
+	/// </summary>
+	/// <param name="newData">The new quiz data to compare.</param>
+	/// <returns>True if the data is different, otherwise false.</returns>
+	private bool CompareSaveData (QuizData currentData, QuizData newData)
+	{
+
+		if (currentData == null || newData == null)
+		{
+			return false;
+		}
+
+		// Implement your comparison logic here. For simplicity, we're just checking if the question count is different.
+		return currentData.version != newData.version;
 	}
 
 	/// <summary>
@@ -67,24 +122,6 @@ public class QuizDataManager : MonoBehaviour
 		}
 	}
 
-	/// <summary>
-	/// Loads quiz data from local storage or uses default questions if no data is found.
-	/// </summary>
-	/// <returns>The loaded or default quiz data.</returns>
-	public QuizData LoadLocalQuizData ()
-	{
-		CurrentQuizData = GetSaveData();
-
-		if (CurrentQuizData == null || CurrentQuizData.questions.Count == 0)
-		{
-			QuizData defaultData = new QuizData { questions = new List<QuizQuestion>(defaultQuestions) };
-			SaveQuestionData(defaultData, fileName);
-			CurrentQuizData = GetSaveData();
-		}
-
-		return CurrentQuizData;
-	}
-
 	private void SaveQuestionData (QuizData newQuizData, string fileName)
 	{
 		SaveLoadSystem.SaveData(newQuizData, fileName);
@@ -94,5 +131,4 @@ public class QuizDataManager : MonoBehaviour
 	{
 		return SaveLoadSystem.LoadData<QuizData>(fileName);
 	}
-
 }

@@ -7,6 +7,11 @@ using System.Collections.Generic;
 public class QuizData
 {
 	/// <summary>
+	/// The version of the quiz data.
+	/// </summary>
+	public string version;
+
+	/// <summary>
 	/// List of quiz questions.
 	/// </summary>
 	public List<QuizQuestion> questions;

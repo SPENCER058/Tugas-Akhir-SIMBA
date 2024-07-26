@@ -3,6 +3,7 @@ using UnityEngine;
 /// <summary>
 /// Manages the quiz flow including loading quiz data, handling user answers, and managing UI in general.
 /// </summary>
+
 public class QuizManager : MonoBehaviour
 {
 	/// <summary>
@@ -13,12 +14,14 @@ public class QuizManager : MonoBehaviour
 	/// <summary>
 	/// Reference to the data manager for the quiz.
 	/// </summary>
-	[SerializeField] private QuizDataManager quizdataManager;
+	[SerializeField] private QuizDataManager quizDataManager;
 
 	/// <summary>
 	/// Reference to the UI for showing quiz results.
 	/// </summary>
 	[SerializeField] private QuizResultUIController quizResultUI;
+
+	[SerializeField] private QuizUpdateUIController quizUpdateUIController;
 
 	private QuizData quizData;
 	private int currentQuestionIndex = 0;
@@ -40,9 +43,22 @@ public class QuizManager : MonoBehaviour
 	{
 		quizUIManager.ButtonInteractable(false);
 
-		quizdataManager.Initialize(() =>
+		quizDataManager.Initialize((bool hasUpdate) =>
 		{
-			quizData = quizdataManager.CurrentQuizData;
+			// Set Data
+			if (hasUpdate)
+			{
+				quizUpdateUIController.ActivateUpdatePanel(
+						quizDataManager.CurrentQuizData.version,
+						quizDataManager.NewestQuizData.version
+					);
+			}
+			else
+			{
+				quizUpdateUIController.DeactivateUpdatePanel();
+			}
+
+			quizData = quizDataManager.CurrentQuizData;
 			ShowNextQuestion();
 		});
 	}
@@ -70,7 +86,6 @@ public class QuizManager : MonoBehaviour
 
 		ShowNextQuestion();
 	}
-
 
 	[SerializeField] private float nextQuestionDelay = 1.5f;
 
@@ -126,5 +141,10 @@ public class QuizManager : MonoBehaviour
 
 		quizUIManager.SetQuestionText(newQuestion.question);
 		quizUIManager.SetChoiceButtonsText(newQuestion.options);
+	}
+
+	public void UpdateQuizData ()
+	{
+		quizData = quizDataManager.CurrentQuizData;
 	}
 }
