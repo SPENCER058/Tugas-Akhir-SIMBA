@@ -123,6 +123,76 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1306253989 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8899853907993312301, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
+  m_PrefabInstance: {fileID: 1833553419}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1306253992 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8465020868784923218, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
+  m_PrefabInstance: {fileID: 1833553419}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306253989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1306253994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306253989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1306253992}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: flood
+  mDatasetName: Vuforia/simba-ar_marker_db.xml
+  mCastedBehaviour: {fileID: 1306253992}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
+--- !u!1 &1409675538 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5122035799168628310, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
+  m_PrefabInstance: {fileID: 1833553419}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1409675541 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4571258305847167135, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
+  m_PrefabInstance: {fileID: 1833553419}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409675538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1409675543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409675538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1409675541}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: tsunami
+  mDatasetName: Vuforia/simba-ar_marker_db.xml
+  mCastedBehaviour: {fileID: 1409675541}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1001 &1833553419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -295,6 +365,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8738204327701253674, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8922785745650020085, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -311,11 +385,58 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3376352753485506371, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
+    - {fileID: 3686970612464241460, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
+    - {fileID: 4005974641150145704, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5122035799168628310, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1409675543}
+    - targetCorrespondingSourceObject: {fileID: 8899853907993312301, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1306253994}
+    - targetCorrespondingSourceObject: {fileID: 7003042581688812003, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1853283696}
   m_SourcePrefab: {fileID: 100100000, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
+--- !u!1 &1853283691 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7003042581688812003, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
+  m_PrefabInstance: {fileID: 1833553419}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1853283694 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1613510937254147899, guid: d26ef1d5ef228cc48893dccab70ee5ff, type: 3}
+  m_PrefabInstance: {fileID: 1833553419}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853283691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1853283696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853283691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1853283694}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: landslide
+  mDatasetName: Vuforia/simba-ar_marker_db.xml
+  mCastedBehaviour: {fileID: 1853283694}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
