@@ -1,71 +1,38 @@
 {
-    "version": "1.1.0",
+    "version": "v1.0.0",
     "questions": [
         {
             "id": 1,
-            "question": "Berapa hasil dari 2 + 2?",
+            "question": "Membuang sampah di sungai dapat menyebabkan bencana?",
             "options": [
-                "3",
-                "4",
-                "5",
-                "6"
+                "Banjir",
+                "Tsunami",
+                "Tanah Longsor",
+                "Semua Benar"
             ],
-            "correct_option": "4"
+            "correct_option": "Banjir"
         },
         {
             "id": 2,
-            "question": "Siapa penemu lampu pijar?",
+            "question": "Penyebab terjadinya tanah longsor adalah?",
             "options": [
-                "Albert Einstein",
-                "Isaac Newton",
-                "Nikola Tesla",
-                "Thomas Edison"
+                "Hujan lebat",
+                "Sampah di sungai",
+                "Kekeringan",
+                "Semua benar"
             ],
-            "correct_option": "Thomas Edison"
+            "correct_option": "Hujan lebat"
         },
         {
             "id": 3,
-            "question": "Apa rumus kimia dari air?",
+            "question": "Kawasan rawan longsor adalah",
             "options": [
-                "CO2",
-                "H2O",
-                "H2SO4",
-                "O2"
+                "Rawa",
+                "Pantai",
+                "Lereng perbukitan",
+                "Dataran Rendah"
             ],
-            "correct_option": "H2O"
-        },
-        {
-            "id": 4,
-            "question": "Planet apa yang paling dekat dengan Matahari?",
-            "options": [
-                "Bumi",
-                "Mars",
-                "Merkurius",
-                "Venus"
-            ],
-            "correct_option": "Merkurius"
-        },
-        {
-            "id": 5,
-            "question": "Siapa yang menulis \"Harry Potter\"?",
-            "options": [
-                "George R.R. Martin",
-                "J.K. Rowling",
-                "J.R.R. Tolkien",
-                "Stephen King"
-            ],
-            "correct_option": "J.K. Rowling"
-        },
-        {
-            "id": 6,
-            "question": "Aowakowaokwa",
-            "options": [
-                "awokwaokwa",
-                "fdsf",
-                "fgegsdg",
-                "gsdgds"
-            ],
-            "correct_option": "awokwaokwa"
+            "correct_option": "Lereng perbukitan"
         }
     ]
 }
