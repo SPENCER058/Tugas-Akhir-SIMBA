@@ -1,0 +1,71 @@
+{
+    "version": "1.1.0",
+    "questions": [
+        {
+            "id": 1,
+            "question": "Berapa hasil dari 2 + 2?",
+            "options": [
+                "3",
+                "4",
+                "5",
+                "6"
+            ],
+            "correct_option": "4"
+        },
+        {
+            "id": 2,
+            "question": "Siapa penemu lampu pijar?",
+            "options": [
+                "Albert Einstein",
+                "Isaac Newton",
+                "Nikola Tesla",
+                "Thomas Edison"
+            ],
+            "correct_option": "Thomas Edison"
+        },
+        {
+            "id": 3,
+            "question": "Apa rumus kimia dari air?",
+            "options": [
+                "CO2",
+                "H2O",
+                "H2SO4",
+                "O2"
+            ],
+            "correct_option": "H2O"
+        },
+        {
+            "id": 4,
+            "question": "Planet apa yang paling dekat dengan Matahari?",
+            "options": [
+                "Bumi",
+                "Mars",
+                "Merkurius",
+                "Venus"
+            ],
+            "correct_option": "Merkurius"
+        },
+        {
+            "id": 5,
+            "question": "Siapa yang menulis \"Harry Potter\"?",
+            "options": [
+                "George R.R. Martin",
+                "J.K. Rowling",
+                "J.R.R. Tolkien",
+                "Stephen King"
+            ],
+            "correct_option": "J.K. Rowling"
+        },
+        {
+            "id": 6,
+            "question": "Aowakowaokwa",
+            "options": [
+                "awokwaokwa",
+                "fdsf",
+                "fgegsdg",
+                "gsdgds"
+            ],
+            "correct_option": "awokwaokwa"
+        }
+    ]
+}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a6338795ee55944832a72042bef261, type: 3}
   m_Name: Landslide
   m_EditorClassIdentifier: 
-  _panelTitleImage: {fileID: 21300000, guid: c427cb08e57c6b34ab8c9168cf4d0057, type: 3}
+  _panelTitleImage: {fileID: 21300000, guid: 3690a37da50c3b144bda888af2468092, type: 3}
   _headerImage: {fileID: 21300000, guid: 455a58a7bd09b1e47a7b922fdc0836b9, type: 3}
   _contentText: "Bencana longsor  merupakan salah satu  jenis  gerakan  massa  tanah 
     atau  batuan, ataupun percampuran keduanya, menuruni atau keluar lereng akibat

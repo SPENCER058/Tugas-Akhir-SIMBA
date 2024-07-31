@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a6338795ee55944832a72042bef261, type: 3}
   m_Name: Flood
   m_EditorClassIdentifier: 
-  _panelTitleImage: {fileID: 21300000, guid: 066c9aa66615aff45b4e14248464205b, type: 3}
+  _panelTitleImage: {fileID: 21300000, guid: b318df2b1a5424349824f9d399233af9, type: 3}
   _headerImage: {fileID: 21300000, guid: c5d28056d6c847e4c8a01850371c8379, type: 3}
   _contentText: "Badan Nasional Penanggulangan Bencana (BNPB) mengatakan bahwa banjir
     merupakan peristiwa atau keadaan terendamnya daratan karena debit air yang meningkat
