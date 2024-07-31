@@ -742,8 +742,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2584328488362829566}
   m_HandleRect: {fileID: 759421077944477675}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.9275789
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1163,6 +1163,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 361035091393824659, guid: 4e197de7d8aa85c42bccc98280d2cf5c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1512271846955108602, guid: 4e197de7d8aa85c42bccc98280d2cf5c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5d5a0e470f679854797bf9a6694b56f9, type: 3}
+    - target: {fileID: 1512271846955108602, guid: 4e197de7d8aa85c42bccc98280d2cf5c, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255416765701202467, guid: 4e197de7d8aa85c42bccc98280d2cf5c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 28e3ecb3319c87e4bb93b8863738a269, type: 3}
+    - target: {fileID: 2255416765701202467, guid: 4e197de7d8aa85c42bccc98280d2cf5c, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3346714961710436675, guid: 4e197de7d8aa85c42bccc98280d2cf5c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3346714961710436675, guid: 4e197de7d8aa85c42bccc98280d2cf5c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3346714961710436675, guid: 4e197de7d8aa85c42bccc98280d2cf5c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.15
+      objectReference: {fileID: 0}
     - target: {fileID: 4888678289625331720, guid: 4e197de7d8aa85c42bccc98280d2cf5c, type: 3}
       propertyPath: m_Name
       value: Help Sub Menu Variant
@@ -1250,7 +1282,27 @@ PrefabInstance:
     - target: {fileID: 6409233496798694310, guid: 4e197de7d8aa85c42bccc98280d2cf5c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a5ca2f0918609714597dddec5d83e97c, type: 3}
+      objectReference: {fileID: 21300000, guid: 23321e2b52fe686408aba9dc0f104f85, type: 3}
+    - target: {fileID: 6409233496798694310, guid: 4e197de7d8aa85c42bccc98280d2cf5c, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963748451492998467, guid: 4e197de7d8aa85c42bccc98280d2cf5c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 650
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963748451492998467, guid: 4e197de7d8aa85c42bccc98280d2cf5c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 260
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963748451492998467, guid: 4e197de7d8aa85c42bccc98280d2cf5c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963748451492998467, guid: 4e197de7d8aa85c42bccc98280d2cf5c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -130
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1279,7 +1331,11 @@ PrefabInstance:
     - target: {fileID: 1043974678818378104, guid: 651e5e0a4324d4042924bc919cc4b6d5, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ded85349cd5b4e44985e81a15489a8de, type: 3}
+      objectReference: {fileID: 21300000, guid: 78785b966d255fa499f10bde3134536b, type: 3}
+    - target: {fileID: 1043974678818378104, guid: 651e5e0a4324d4042924bc919cc4b6d5, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2270656211963043345, guid: 651e5e0a4324d4042924bc919cc4b6d5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
