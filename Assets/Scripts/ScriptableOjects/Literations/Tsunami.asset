@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a6338795ee55944832a72042bef261, type: 3}
   m_Name: Tsunami
   m_EditorClassIdentifier: 
-  _panelTitleImage: {fileID: 21300000, guid: 256a535899b1db64ea5a01305f961a4b, type: 3}
+  _panelTitleImage: {fileID: 21300000, guid: 818abfb309fafa04a8342cdf076f8f22, type: 3}
   _headerImage: {fileID: 21300000, guid: 1b7d3a2e94b4f754d88e427539b6d0df, type: 3}
   _contentText: "Tsunami merupakan sebuah bencana \ngelombang air laut besar yang
     disebabkan oleh fenomena bawah laut seperti pergeseran lempeng, tanah longsor,
