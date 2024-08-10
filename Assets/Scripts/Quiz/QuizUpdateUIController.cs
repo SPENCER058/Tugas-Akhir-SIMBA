@@ -17,7 +17,7 @@ public class QuizUpdateUIController : MonoBehaviour
 
     public void DeactivateUpdatePanel ()
     {
-        Debug.Log("Hehehehe");
+        updatePanel.SetActive(false);
     }
 
     private void UpdateText (TextMeshProUGUI TMP, string text)
