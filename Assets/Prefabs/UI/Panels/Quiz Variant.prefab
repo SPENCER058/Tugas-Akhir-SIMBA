@@ -4963,7 +4963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   apiManager: {fileID: 3642541858354866674}
-  defaultVersion: v1.0.0
+  defaultVersion: 1.0.0
   defaultQuestions:
   - id: 1
     question: Membuang sampah di sungai dapat menyebabkan bencana?
@@ -4976,10 +4976,10 @@ MonoBehaviour:
   - id: 2
     question: Penyebab terjadinya tanah longsor adalah?
     options:
-    - Hujan lebat
+    - Semua benar
     - Sampah di sungai
     - Kekeringan
-    - Semua benar
+    - Hujan lebat
     correct_option: Hujan lebat
   - id: 3
     question: Kawasan rawan longsor adalah
