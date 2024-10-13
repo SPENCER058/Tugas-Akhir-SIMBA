@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
-    <ImageTarget name="tsunami" size="0.200000 0.352941" />
-    <ImageTarget name="flood" size="0.200000 0.352941" />
-    <ImageTarget name="landslide" size="0.200000 0.352941" />
+    <ImageTarget name="landslide" size="0.200000 0.141391" />
+    <ImageTarget name="flood" size="0.200000 0.141391" />
+    <ImageTarget name="tsunami" size="0.200000 0.141391" />
   </Tracking>
 </QCARConfig>
