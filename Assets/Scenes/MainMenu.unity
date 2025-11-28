@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.3708984, g: 0.37837017, b: 0.35722536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -203,6 +203,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -66.458496
       objectReference: {fileID: 0}
+    - target: {fileID: 5688912129683500353, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -182.7998
+      objectReference: {fileID: 0}
     - target: {fileID: 6770425194379593565, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -226,6 +230,238 @@ PrefabInstance:
     - target: {fileID: 6770425194379593565, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8122497074002475267, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -185.2998
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[3].id
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[4].id
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[5].id
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[6].id
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[7].id
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[8].id
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[9].id
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[3].question
+      value: 'Apa penyebab tsunami dibawah ini yang benar? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[4].question
+      value: Mitigasi yang benar sebelum longsor?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[5].question
+      value: Dampak banjir dibawah ini yang benar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[6].question
+      value: Yang harus dihindari setelah terjadi longsor
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[7].question
+      value: Mitigasi  menghadapi tsunami adalah
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[8].question
+      value: Dampak bencana tsunami yang benar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[9].question
+      value: Saat terjadi tsunami, sebaiknya
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[3].correct_option
+      value: Gempa dasar laut
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[4].correct_option
+      value: Pelandaian lereng
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[5].correct_option
+      value: Kerusakan bangunan
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[6].correct_option
+      value: Wilayah longsor
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[7].correct_option
+      value: Edukasi Mitigasi
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[8].correct_option
+      value: Korban jiwa
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[9].correct_option
+      value: Mengevakuasi diri
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[3].options.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[4].options.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[5].options.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[6].options.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[7].options.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[8].options.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[9].options.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[3].options.Array.data[0]
+      value: Kekeringan
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[3].options.Array.data[1]
+      value: Gempa dasar laut
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[3].options.Array.data[2]
+      value: Hujan deras
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[3].options.Array.data[3]
+      value: Angin topan
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[4].options.Array.data[0]
+      value: Pelandaian lereng
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[4].options.Array.data[1]
+      value: Menonton TV
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[4].options.Array.data[2]
+      value: Tetap di rumah
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[4].options.Array.data[3]
+      value: Mencari perhiasan
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[5].options.Array.data[0]
+      value: Ekonomi meningkat
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[5].options.Array.data[1]
+      value: Tanah subur
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[5].options.Array.data[2]
+      value: Hujan deras
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[5].options.Array.data[3]
+      value: Kerusakan bangunan
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[6].options.Array.data[0]
+      value: 'Jalan kering '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[6].options.Array.data[1]
+      value: Tempat evakuasi
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[6].options.Array.data[2]
+      value: Wilayah longsor
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[6].options.Array.data[3]
+      value: Makanan sehat
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[7].options.Array.data[0]
+      value: Edukasi Mitigasi
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[7].options.Array.data[1]
+      value: Tidur
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[7].options.Array.data[2]
+      value: Membeli Baju Baru
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[7].options.Array.data[3]
+      value: Menonton Kartun TV
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[8].options.Array.data[0]
+      value: Ekonomi meningkat
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[8].options.Array.data[1]
+      value: Korban jiwa
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[8].options.Array.data[2]
+      value: Pertanian subur
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[8].options.Array.data[3]
+      value: Tanah subur
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[9].options.Array.data[0]
+      value: Tidur
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[9].options.Array.data[1]
+      value: Merekam video
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[9].options.Array.data[2]
+      value: Jalan-jalan
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768939085707430203, guid: 964cc50efeb8dcc499e798a8c0c23b69, type: 3}
+      propertyPath: defaultQuestions.Array.data[9].options.Array.data[3]
+      value: Mengevakuasi diri
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
